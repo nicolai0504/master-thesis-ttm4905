@@ -1,0 +1,19 @@
+\chapter{Research}
+\label{chp:research} 
+
+\section{Related work}
+In the last decade the importance of security against attacks on large computer systems has grown rapidly. In 2004, the ACM workshop on Visualization and data mining for computer security presented NVisionIP: netflow visualizations of system state for security situational awareness[kilde]. This was one of the first tools too visualize NetFlow data. The visualization was based on either number of bytes transmitted or the number of flows to or from the hosts on the network. 
+
+In [Kilde] they discuss the use of NVisionIP to combat different security concerns. Most of the same attacks covered in this paper are relevant today, only in today's massive amounts of data, they may be way more difficult to discover. 
+
+\begin{itemize}
+\item \textbf{Worm infection}: One of the most basic security function one might uncover.  Worms usually spread by probing for other hosts. Filtering out hosts transmitting a lot of Flows with a single destination port, one could easily see which machines are infected and should be taken offline. 
+\item \textbf{Compromised systems}: If a host is compromised, the attacker might install malware that allows the attacker to control the machine. Following this an attacker might turn a host into a file server. By detecting large volumes of traffic on certain ports one might discover such an attack. 
+\item \textbf{Misuse}: Misuse of computer networks in order with terms of use etc.. An example is detecting if certain users have abnormal high volumes of traffic, and by inspecting in more detail one can uncover if this trough one single application and not in accordance with the policies of the organization. 
+\item \textbf{Port Scans}: When a large number of ports are used at a specific host it is easily identified by NVisionIP.
+\item \textbf{DDos}: Distributed Denial of Service Attacks will be visible trough spikes in traffic volume from the host attacking. If a host is attacked the same pattern is visible trough high volumes in receiving traffic. Thus peaks in traffic is not necessary an attack, but might be a result of a new release, or backup etc .. 
+\end{itemize}
+
+\section{Initial research}
+
+
