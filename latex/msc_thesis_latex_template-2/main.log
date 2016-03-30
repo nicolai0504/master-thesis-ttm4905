@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  16 MAR 2016 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  30 MAR 2016 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1959,7 +1959,7 @@ e
 \c@lstlisting=\count349
 
 ABD: EveryShipout initializing macros
-<./figs/ntnu-logo.pdf, id=67, 241.4922pt x 52.79724pt>
+<./figs/ntnu-logo.pdf, id=83, 241.4922pt x 52.79724pt>
 File: ./figs/ntnu-logo.pdf Graphic file (type pdf)
 
 <use ./figs/ntnu-logo.pdf>
@@ -2033,19 +2033,19 @@ No file main.acr.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 25.
 
-<netflow_cache.png, id=166, 1280.785pt x 645.41125pt>
+<netflow_cache.png, id=186, 1280.785pt x 645.41125pt>
 File: netflow_cache.png Graphic file (type png)
  <use netflow_cache.png>
 Package pdftex.def Info: netflow_cache.png used on input line 27.
 (pdftex.def)             Requested size: 256.15247pt x 129.07996pt.
 
-[2 <./netflow_cache.png>] <attentive.png, id=175, 1196.47pt x 303.1325pt>
+[2 <./netflow_cache.png>] <attentive.png, id=195, 1196.47pt x 303.1325pt>
 File: attentive.png Graphic file (type png)
 
 <use attentive.png>
 Package pdftex.def Info: attentive.png used on input line 68.
 (pdftex.def)             Requested size: 239.28976pt x 60.62541pt.
- <pre_attentive.png, id=176, 1176.395pt x 296.10625pt>
+ <pre_attentive.png, id=196, 1176.395pt x 296.10625pt>
 File: pre_attentive.png Graphic file (type png)
 
 <use pre_attentive.png>
@@ -2059,9 +2059,47 @@ Package pdftex.def Info: pre_attentive.png used on input line 70.
 
 
 
-] [7]) [8]
+] [7] <botnet.jpg, id=222, 1218.5525pt x 902.37125pt>
+File: botnet.jpg Graphic file (type jpg)
+
+<use botnet.jpg>
+Package pdftex.def Info: botnet.jpg used on input line 29.
+(pdftex.def)             Requested size: 243.70618pt x 180.47105pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+<cloud.jpg, id=227, 1221.56375pt x 935.495pt>
+File: cloud.jpg Graphic file (type jpg)
+ <use cloud.jpg>
+Package pdftex.def Info: cloud.jpg used on input line 33.
+(pdftex.def)             Requested size: 244.30843pt x 187.09567pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./botnet.jpg> <./cloud.jpg>]
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
+ []
+
+
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
+ []
+
+
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
+ []
+
+
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
+ []
+
+) [10]
 No file main.bbl.
-(./main.tdo) [9
+(./main.tdo) [11
 
 
 
@@ -2083,21 +2121,22 @@ No file main.bbl.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
- (./main.aux (./preface.aux) (./background.aux) (./research.aux))
+ (./main.aux (./preface.aux) (./background.aux)
+(./research.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 406F0BC9CE1D36C3DF606C185AA0D61B;896.
+(rerunfilecheck)             Checksum: 256B7B187990C1A6654A08D50B75F1C9;1192.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 31250 strings out of 493089
- 531718 string characters out of 6134841
- 766232 words of memory out of 5000000
- 33957 multiletter control sequences out of 15000+600000
- 75979 words of font info for 94 fonts, out of 8000000 for 9000
+ 31284 strings out of 493089
+ 532299 string characters out of 6134841
+ 766398 words of memory out of 5000000
+ 33979 multiletter control sequences out of 15000+600000
+ 76062 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,78p,1856b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,78p,1856b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-d
@@ -2105,10 +2144,10 @@ ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (25 pages, 1003121 bytes).
+Output written on main.pdf (27 pages, 1580453 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 17049 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 17091 words of extra memory for PDF output out of 17280 (max. 10000000)
 
