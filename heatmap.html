@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style> /* set the CSS */
-
-body { font: 12px Arial;}
-
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-rect.bordered {
+<html>
+  <head>
+    <style>
+      rect.bordered {
         stroke: #E6E6E6;
         stroke-width:2px;   
       }
@@ -35,59 +21,37 @@ rect.bordered {
       text.axis-worktime {
         fill: #000;
       }
-</style>
-<body>
+    </style>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script type='text/javascript' src='knockout-min.js'></script>
 
-<!-- <div id="option">
-    <input name="updateButton" 
-           type="button" 
-           value="Previous" 
-           onclick="previousData()" />
-</div>
+  </head>
+  <body>
+    <div id="chart"></div>
+    <div id="dataset-picker">
+    </div>
+    <script type="text/javascript">
 
-<div id="option">
-    <input name="updateButton" 
-           type="button" 
-           value="Next" 
-           onclick="nextData()" />
-</div> -->
-
-<!-- load the d3.js library -->    
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script type='text/javascript' src='knockout-min.js'></script>
-
-<div id="area1"></div>
-<div id="area2"></div>
-
-<script>
-
-function AppViewModel(){
+    function AppViewModel(){
   this.currentDay = ko.observable(1);
   availableCountries = ko.observableArray(['129.432.123.3', '129.987.123.422', '987.654.432.123','456.423.0.124']);
   availablePorts = ko.observableArray(['80','8080','8000','7000'])
   this.chosenIp = ko.observable(availableCountries()[0]);
-  this.chosenPort = ko.observable(availablePorts()[0]);
 }
 
 ko.applyBindings(AppViewModel);
-
-// ** Update data section (Called from the onclick)
-
-
-function firstGraph(){
-var margin = { top: 50, right: 0, bottom: 10, left: 60 },
+      var margin = { top: 50, right: 0, bottom: 100, left: 100 },
           width = 3000 - margin.left - margin.right,
-          height = 650 - margin.top - margin.bottom,
+          height = 1200 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 24),
-          legendElementWidth = gridSize,
+          legendElementWidth = gridSize*2,
           buckets = 9,
           colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
           days = availablePorts(),
           times = availableCountries(),
           datasets = ["data.tsv", "data2.tsv"];
 
-      var svg = d3.select("#area1")
-          .append("svg")
+      var svg = d3.select("#chart").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
@@ -119,9 +83,7 @@ var margin = { top: 50, right: 0, bottom: 10, left: 60 },
           return {
             day: +d.day,
             hour: +d.hour,
-            value: +d.value,
-            ip: d.ip,
-            port: d.port
+            value: +d.value
           };
         },
         function(error, data) {
@@ -142,13 +104,7 @@ var margin = { top: 50, right: 0, bottom: 10, left: 60 },
               .attr("class", "hour bordered")
               .attr("width", gridSize)
               .attr("height", gridSize)
-              .style("fill", colors[0])
-              .on("click", function(d){
-                chosenIp(d.ip);
-                chosenPort(d.port)
-                console.log(d.value+" "+""+chosenIp()+" "+chosenPort());
-                updateGraph();
-              });
+              .style("fill", colors[0]);
 
           cards.transition().duration(1000)
               .style("fill", function(d) { return colorScale(d.value); });
@@ -157,9 +113,30 @@ var margin = { top: 50, right: 0, bottom: 10, left: 60 },
           
           cards.exit().remove();
 
+          var legend = svg.selectAll(".legend")
+              .data([0].concat(colorScale.quantiles()), function(d) { return d; });
+
+          legend.enter().append("g")
+              .attr("class", "legend");
+
+          legend.append("rect")
+            .attr("x", function(d, i) { return legendElementWidth * i; })
+            .attr("y", height)
+            .attr("width", legendElementWidth)
+            .attr("height", gridSize / 2)
+            .style("fill", function(d, i) { return colors[i]; });
+
+          legend.append("text")
+            .attr("class", "mono")
+            .text(function(d) { return "≥ " + Math.round(d); })
+            .attr("x", function(d, i) { return legendElementWidth * i; })
+            .attr("y", height + gridSize);
+
+          legend.exit().remove();
+
         });  
       };
-
+ 
       heatmapChart(datasets[0]);
       
       var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
@@ -173,76 +150,6 @@ var margin = { top: 50, right: 0, bottom: 10, left: 60 },
         .on("click", function(d) {
           heatmapChart(d);
         });
-
-        function updateGraph(){
-          d3.select("#area2").selectAll("svg").remove();
-
-        var margin = {top: 30, right: 20, bottom: 30, left: 70},
-    width = 600 - margin.left - margin.right,
-    height = 270 - margin.top - margin.bottom;
-
-// Parse the date / time
-var parseDate = d3.time.format("%d-%b-%y").parse;
-
-// Set the ranges
-var x = d3.time.scale().range([0, width]);
-var y = d3.scale.linear().range([height, 0]);
-
-// Define the axes
-var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
-
-var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(5);
-
-// Define the line
-var valueline = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
-    
-// Adds the svg canvas
-var svg = d3.select("#area2")
-    .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-        .attr("transform", 
-              "translate(" + margin.left + "," + margin.top + ")");
-
-// Get the data
-d3.csv("test2.csv", function(error, data) {
-    data.forEach(function(d) {
-        d.date = parseDate(d.date);
-        d.close = +d.close;
-    });
-
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-    // Add the valueline path.
-    svg.append("path")
-        .attr("class", "line")
-        .attr("d", valueline(data));
-
-    // Add the X Axis
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
-
-    // Add the Y Axis
-    svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
-
-});
-    };
-    updateGraph()
-  };
-
-
-firstGraph();
-
-</script>
-</body>
+    </script>
+  </body>
+</html>

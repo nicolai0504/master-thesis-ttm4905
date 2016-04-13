@@ -16,10 +16,11 @@
 \contentsline {subsubsection}{Objectives}{4}{section*.5}
 \contentsline {subsubsection}{Scope}{4}{section*.6}
 \contentsline {section}{\numberline {1.3}D3.js}{5}{section.1.3}
-\contentsline {chapter}{\chapternumberline {2}Research}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Related work}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Initial research}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Traits of a DDoS attack}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Raw NetFlow format}{9}{subsection.2.3.1}
-\contentsline {section}{\numberline {2.4}Using D3.js}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Number of flows to a certain host and port}{10}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {1.3.1}How does it work?}{5}{subsection.1.3.1}
+\contentsline {chapter}{\chapternumberline {2}Research}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Related work}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Initial research}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}Traits of a DDoS attack}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Raw NetFlow format}{12}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}Using D3.js}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Number of flows to a certain host and port}{13}{subsection.2.4.1}

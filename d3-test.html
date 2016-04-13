@@ -236,7 +236,7 @@ var	chart2 = d3.select("body")
 d3.csv("data.csv", function(error, data) {
 	data.forEach(function(d) {
 		d.date = parseDate(d.date);
-		d.close = +d.close;
+		d.close = +d.grid;
 	});
 
 	// Scale the range of the data

@@ -32,7 +32,17 @@ Another new trend that has emerged is using large datacenters or cloud machines 
 
 \includegraphics[scale=0.2]{cloud}
 
+Distributed Reflection Denial of Service attacks is becoming more and more popular. DrDoS techniques usually involve mulitple victim host machines that unwillingly participate in a DDoS attack on the attackers primary target. Requests to the victim host machines are redirected, or re ected, from the victim hosts to the target. Anonymity is one advantage of the DrDoS attack method. In a DrDoS attack, the primary target appears to be directly attacked by the victim host servers, not the actual attacker. This approach is called spoo ng.
+Ampli cation is another advantage of the DrDoS attack method. By involving multiple victim servers, the attacker’s initial request yields a response that is larger than what was sent, thus increasing the attack bandwidth.
+
+\includegraphics[scale=0.2]{drdos}
+
 \subsection{Raw NetFlow format}
+\includegraphics[scale=0.4]{netflow_ddos}
+In the preceding example, there are multiple flows for UDP port 80 (hex value 0050). In addition, there are also flows for TCP port 53 (hex value 0035) and TCP port 80 (hex value 0050).
+
+The packets in these flows may be spoofed and may indicate an attempt to perform these attacks. It is advisable to compare the flows for TCP port 53 (hex value 0035) and TCP port 80 (hex value 0050) to normal baselines to aid in determining whether an attack is in progress.
+
 \todo{Finne kommandolinjeversjon av et DDoS angrep}
 
 

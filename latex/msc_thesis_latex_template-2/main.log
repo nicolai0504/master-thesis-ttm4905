@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  30 MAR 2016 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  13 APR 2016 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,40 +1857,43 @@ s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count341
-) (./glossary.tex)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(./glossary.tex)
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 23.
+Package glossaries Info: Writing glossary file main.glo on input line 57.
 \glo@acronym@file=\write7
 \openout7 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 23.
+Package glossaries Info: Writing glossary file main.acn on input line 57.
  (./main.aux (./preface.aux) (./background.aux) (./research.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1906,7 +1909,7 @@ LaTeX Font Info:    ... okay on input line 25.
 \makeMPintoPDFobject=\count347
 \everyMPtoPDFconversion=\toks72
 )
-LaTeX Info: Redefining \microtypecontext on input line 25.
+LaTeX Info: Redefining \microtypecontext on input line 59.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1921,7 +1924,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box84
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 59.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1933,10 +1936,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 25.
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
 (./main.out) (./main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
@@ -1959,13 +1962,13 @@ e
 \c@lstlisting=\count349
 
 ABD: EveryShipout initializing macros
-<./figs/ntnu-logo.pdf, id=83, 241.4922pt x 52.79724pt>
+<./figs/ntnu-logo.pdf, id=87, 241.4922pt x 52.79724pt>
 File: ./figs/ntnu-logo.pdf Graphic file (type pdf)
 
 <use ./figs/ntnu-logo.pdf>
-Package pdftex.def Info: ./figs/ntnu-logo.pdf used on input line 31.
+Package pdftex.def Info: ./figs/ntnu-logo.pdf used on input line 65.
 (pdftex.def)             Requested size: 170.71652pt x 37.32436pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 31.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 65.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1974,14 +1977,14 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Calculating math sizes for size <11.49994> on input line 31
+LaTeX Font Info:    Calculating math sizes for size <11.49994> on input line 65
 .
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11.49994> on input line 31.
+(Font)              <11.49994> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8.04991> on input line 31.
+(Font)              <8.04991> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.74997> on input line 31.
+(Font)              <5.74997> on input line 65.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -2033,43 +2036,70 @@ No file main.acr.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 25.
 
-<netflow_cache.png, id=186, 1280.785pt x 645.41125pt>
+<netflow_cache.png, id=191, 1280.785pt x 645.41125pt>
 File: netflow_cache.png Graphic file (type png)
  <use netflow_cache.png>
 Package pdftex.def Info: netflow_cache.png used on input line 27.
 (pdftex.def)             Requested size: 256.15247pt x 129.07996pt.
 
-[2 <./netflow_cache.png>] <attentive.png, id=195, 1196.47pt x 303.1325pt>
+[2 <./netflow_cache.png>] <attentive.png, id=200, 1196.47pt x 303.1325pt>
 File: attentive.png Graphic file (type png)
 
 <use attentive.png>
 Package pdftex.def Info: attentive.png used on input line 68.
 (pdftex.def)             Requested size: 239.28976pt x 60.62541pt.
- <pre_attentive.png, id=196, 1176.395pt x 296.10625pt>
+ <pre_attentive.png, id=201, 1176.395pt x 296.10625pt>
 File: pre_attentive.png Graphic file (type png)
 
 <use pre_attentive.png>
 Package pdftex.def Info: pre_attentive.png used on input line 70.
 (pdftex.def)             Requested size: 235.27483pt x 59.22018pt.
- [3] [4 <./attentive.png> <./pre_attentive.png>])
-[5]
+ [3] [4 <./attentive.png> <./pre_attentive.png>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 125.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 125.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 126.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+<graph.png, id=298, 593.21625pt x 266.9975pt>
+File: graph.png Graphic file (type png)
+ <use graph.png>
+Package pdftex.def Info: graph.png used on input line 221.
+(pdftex.def)             Requested size: 296.60739pt x 133.49841pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./graph.png>] [8]
 \openout2 = `research.aux'.
 
- (./research.tex [6
+ (./research.tex [9
 
 
 
-] [7] <botnet.jpg, id=222, 1218.5525pt x 902.37125pt>
+]
+<botnet.jpg, id=345, 1218.5525pt x 902.37125pt>
 File: botnet.jpg Graphic file (type jpg)
-
-<use botnet.jpg>
+ <use botnet.jpg>
 Package pdftex.def Info: botnet.jpg used on input line 29.
 (pdftex.def)             Requested size: 243.70618pt x 180.47105pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
-<cloud.jpg, id=227, 1221.56375pt x 935.495pt>
+ [10]
+<cloud.jpg, id=350, 1221.56375pt x 935.495pt>
 File: cloud.jpg Graphic file (type jpg)
  <use cloud.jpg>
 Package pdftex.def Info: cloud.jpg used on input line 33.
@@ -2077,31 +2107,49 @@ Package pdftex.def Info: cloud.jpg used on input line 33.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./botnet.jpg> <./cloud.jpg>]
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+ [11 <./botnet.jpg> <./cloud.jpg>] <drdos.png, id=355, 1039.885pt x 605.26125pt
+>
+File: drdos.png Graphic file (type png)
+
+<use drdos.png>
+Package pdftex.def Info: drdos.png used on input line 38.
+(pdftex.def)             Requested size: 207.97331pt x 121.0501pt.
+ <netflow_ddos.png, id=356, 645.41125pt x 634.37pt>
+File: netflow_ddos.png Graphic file (type png)
+
+<use netflow_ddos.png>
+Package pdftex.def Info: netflow_ddos.png used on input line 41.
+(pdftex.def)             Requested size: 258.15993pt x 253.7435pt.
+ [12 <./drdos.png> <./netflow_ddos.png>]
+
+LaTeX Warning: Marginpar on page 13 moved by 0.4217pt.
+
+
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 55--55
 [][][][]\T1/lmr/m/n/10 (-20) Screenshot  
  []
 
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 55--55
 [][][][]\T1/lmr/m/n/10 (-20) Screenshot  
  []
 
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 55--55
 [][][][]\T1/lmr/m/n/10 (-20) Screenshot  
  []
 
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 45--45
+Overfull \hbox (2.7037pt too wide) in paragraph at lines 55--55
 [][][][]\T1/lmr/m/n/10 (-20) Screenshot  
  []
 
-) [10]
+) [13] [14
+
+
+]
 No file main.bbl.
-(./main.tdo) [11
-
-
+(./main.tdo) [15
 
 ]
 \tf@toc=\write9
@@ -2119,35 +2167,40 @@ No file main.bbl.
 \tf@tdo=\write13
 \openout13 = `main.tdo'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
  (./main.aux (./preface.aux) (./background.aux)
 (./research.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 256B7B187990C1A6654A08D50B75F1C9;1192.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
+(rerunfilecheck)             Checksum: 5FF190EF618033AAA582BB441A80D0E7;1263.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 31284 strings out of 493089
- 532299 string characters out of 6134841
- 766398 words of memory out of 5000000
- 33979 multiletter control sequences out of 15000+600000
- 76062 words of font info for 95 fonts, out of 8000000 for 9000
+ 32032 strings out of 493089
+ 541160 string characters out of 6134841
+ 984755 words of memory out of 5000000
+ 34590 multiletter control sequences out of 15000+600000
+ 91012 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,78p,1856b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (27 pages, 1580453 bytes).
+ 68i,13n,78p,1856b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
+/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2
+015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmsy8.pfb>
+Output written on main.pdf (31 pages, 3865415 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 17091 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 22746 words of extra memory for PDF output out of 24883 (max. 10000000)
 
