@@ -1,0 +1,26 @@
+\begin{thebibliography}{LYBL04}
+
+\bibitem[LYBL04]{nvisionip}
+K.~Lakkaraju, W.~Yurcik, R.~Bearavolu, and A.~J. Lee.
+\newblock Nvisionip: an interactive network flow visualization tool for
+  security.
+\newblock In {\em Systems, Man and Cybernetics, 2004 IEEE International
+  Conference on}, volume~3, pages 2675--2680 vol.3, Oct 2004.
+
+\bibitem[LYL04]{nvisionip_list}
+Kiran Lakkaraju, William Yurcik, and Adam~J. Lee.
+\newblock Nvisionip: Netflow visualizations of system state for security
+  situational awareness.
+\newblock In {\em Proceedings of the 2004 ACM Workshop on Visualization and
+  Data Mining for Computer Security}, VizSEC/DMSEC '04, pages 65--72, New York,
+  NY, USA, 2004. ACM.
+
+\bibitem[TGM83]{tufte}
+Edward~R Tufte and PR~Graves-Morris.
+\newblock {\em The visual display of quantitative information}, volume~2.
+\newblock Graphics press Cheshire, CT, 1983.
+
+\bibitem[wik16]{wiki_data_viz}
+Data presentation architecture, 2016.
+
+\end{thebibliography}

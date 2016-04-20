@@ -2,9 +2,10 @@
 \label{chp:background} 
 
 \section{NetFlow}
+\label{netflow}
 Cisco IOS NetFlow creates an enviroment that have the tools to understand who, what, when, where and how network traffic is flowing. This makes it easier for administrators to utilize the network as optimal as possible. One can determine the source and destination of traffic and use this information to reveal for example DDoS-attacks or spam mail. 
 
-\subsection{How dies it work?}
+\subsection{How does it work?}
 Every packet that is forwarded within a router/switch is examined for a set of IP packet attributes. With these attributes one can determine if the packet is unique or similar to other packets. 
 
 The attributes used by NetFlow are:
@@ -22,9 +23,34 @@ To group packets into a flow, one compares source/destination IP address, source
 
 When the NetFlow cache is created one can use this to understand the network behaviour. The different attributes generate different knowledge about a certain network, and combined they can paint a detailed picture of how the network is working. For example the ports show what application is utlizing the traffic, while the tallied packets and bytes show the amount of traffic. 
 
+
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{netflow_cache}
+\caption{Creating a flow in the NetFlow cache siter}
+\end{figure}
+
+\begin{itemize}
+\item Source address allows the understanding of who is originating the traffic
+\item Destination address tells who is receiving the traffic
+\item Ports characterize the application utilizing the traffic
+\item Class of service examines the priority of the traffic
+\item The device interface tells how traffic is being utilized by the network device
+\item Tallied packets and bytes show the amount of traffic
+\end{itemize}
+
+Additional information added to a flow includes:
+\begin{itemize}
+
+
+\item Flow timestamps to understand the life of a flow; timestamps are useful for calculating packets and bytes per second
+\item Next hop IP addresses including BGP routing Autonomous Systems (AS)
+\item Subnet mask for the source and destination addresses to calculate prefixes
+ \item  flags to examine TCP handshakes
+
+\end{itemize}
 \todo{Lime inn hvordan det ser ut i kommandolinjen}
 
-\includegraphics[scale=0.2]{netflow_cache}
+\todo{sitere listen}
 
 \subsection{Main components}
 A typical setup using NetFlow consists of three main components:
@@ -37,15 +63,23 @@ A typical setup using NetFlow consists of three main components:
 \item \textbf{Analysis application:} an application that analyze the received flow data in different contexts, such as intrusion or traffic profiling.
 \end{itemize}
 
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{netflow_arch}
+\caption{Figure of a simple NetFlow architecture}
+\end{figure}
+
 \section{Data visualization}
 Data visualization refers to the techniques used to communicate data or information by encoding it as visual objects[sitere?]. Meaning that information is represented trough any visual element such as graphs and plots, but may also take any other visual form. Visualization helps users analyse and interact with data in a whole new way. It makes complex data more accessible, understandable and usable. 
 
 In recent years the rate of which data is generated has increased rapidly, and the need for information to be available and comprehensible is growing. All these new sources of data has created what we refer to as "Big Data". Without visual presentation such data is too big to understand. This is the big reason for visualization is emerging as a big market. 
 
-Combining several parameters through visualization could reveal something automated systems might ignore or don't pick up on. "The greatest value of a picture is when it forces us to notice what we never expected to see."[kilde på wiki] by John Tukey.
+Combining several parameters through visualization could reveal something automated systems might ignore or don't pick up on. \begin{quotation}
+The greatest value of a picture is when it forces us to notice what we never expected to see.
+\end{quotation} by John Tukey.
 
 \subsection{Characteristics}
-In his 1983 book The Visual Display of Quantitative Information, Edward Tufte defines characteristics any effective graphical representation should contain as:
+\label{characteristics}
+In his book from 1983, The Visual Display of Quantitative Information\cite{tufte}, Edward Tufte defines characteristics any effective graphical representation should contain as:
 
 \begin{itemize}
 \item show the data
@@ -62,15 +96,20 @@ In his 1983 book The Visual Display of Quantitative Information, Edward Tufte de
 \subsection{Visual perception}
 In this paper the correlation between effective visual communication and how it is perceived upon human inspection is important. A humans ability to distinguish between differences in length, shape and color is referred to as "pre-attentive attributes".  
 
-A good example of this is imagining finding the number of a certain character in a series of characters. This requires significant time and effort, but if the character were to stand out by being a different size, color or orientation this could be done quickly trough pre-attentive processing. Good data visualization takes all of this into consideration and uses pre-attentive processing.
-In this simple example it is easy to see how pre attentive processing is used to distinguish how many occurrences of the number 5 is in a larger set of numbers. 
+A good example of this is imagining finding the number of a certain character in a series of characters. This requires significant time and effort, but if the character were to stand out by being a different size, color or orientation this could be done quickly trough pre-attentive processing. Good data visualization takes all of this into consideration and uses pre-attentive processing. In this simple example it is easy to see how pre attentive processing is used to distinguish how many occurrences of the number 5 is in a larger set of random numbers. 
 \newline
-\includegraphics[scale=0.2]{attentive}
-\newline
-\includegraphics[scale=0.2]{pre_attentive}
 
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{attentive}
+\caption{Example of dataset of random numbers where no pre-attentive processing is done}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{pre_attentive}
+\caption{Example of a dataset of random numbers where pre-attentive processing has been used to distinguish the occurrences of the number five}
+\end{figure}
 \subsection{Data presentation architecture}
-Data presentation architecture(DPA) has its purpose to identify, locate, manipulate, format and present data in such a way as to optimally communicate meaning and proffer knowledge[kilde]. This has become an important tool in Business Intelligence, the art of transforming raw data into something useful. 
+Data presentation architecture(DPA) has its purpose to identify, locate, manipulate, format and present data in such a way as to optimally communicate meaning and proffer knowledge\cite{wiki_data_viz}. This has become an important tool in Business Intelligence, the art of transforming raw data into something useful. 
 
 \subsubsection{Objectives}
 DPA has two main objectives, which is the following:

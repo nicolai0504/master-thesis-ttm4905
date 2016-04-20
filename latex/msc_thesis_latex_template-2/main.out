@@ -3,7 +3,7 @@
 \BOOKMARK [0][-]{chapter*.3}{List of Algorithms}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Background}{}% 4
 \BOOKMARK [1][-]{section.1.1}{NetFlow}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.1}{How dies it work?}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.1}{How does it work?}{section.1.1}% 6
 \BOOKMARK [2][-]{subsection.1.1.2}{Main components}{section.1.1}% 7
 \BOOKMARK [1][-]{section.1.2}{Data visualization}{chapter.1}% 8
 \BOOKMARK [2][-]{subsection.1.2.1}{Characteristics}{section.1.2}% 9
@@ -17,4 +17,9 @@
 \BOOKMARK [1][-]{section.2.3}{Traits of a DDoS attack}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.3.1}{Raw NetFlow format}{section.2.3}% 18
 \BOOKMARK [1][-]{section.2.4}{Using D3.js}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.4.1}{Number of flows to a certain host and port}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.1}{Scope}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.2}{Number of flows to a certain host and port}{section.2.4}% 21
+\BOOKMARK [0][-]{chapter.3}{Challenges}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Large data sets}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.1.1}{IP-spectrum}{section.3.1}% 24
+\BOOKMARK [0][-]{section*.13}{References}{}% 25

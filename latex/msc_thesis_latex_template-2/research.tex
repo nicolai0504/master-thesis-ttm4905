@@ -2,9 +2,9 @@
 \label{chp:research} 
 
 \section{Related work}
-In the last decade the importance of security against attacks on large computer systems has grown rapidly. In 2004, the ACM workshop on Visualization and data mining for computer security presented NVisionIP: netflow visualizations of system state for security situational awareness[kilde]. This was one of the first tools too visualize NetFlow data. The visualization was based on either number of bytes transmitted or the number of flows to or from the hosts on the network. 
+In the last decade the importance of security against attacks on large computer systems has grown rapidly. In 2004, the ACM workshop on Visualization and data mining for computer security presented NVisionIP: netflow visualizations of system state for security situational awareness\cite{nvisionip}. This was one of the first tools too visualize NetFlow data. The visualization was based on either number of bytes transmitted or the number of flows to or from the hosts on the network. 
 
-In [Kilde] they discuss the use of NVisionIP to combat different security concerns. Most of the same attacks covered in this paper are relevant today, only in today's massive amounts of data, they may be way more difficult to discover. 
+In \cite{nvisionip_list} they discuss the use of NVisionIP to combat different security concerns. Most of the same attacks covered in this paper are relevant today, only in today's massive amounts of data, they may be way more difficult to discover. 
 
 \begin{itemize}
 \item \textbf{Worm infection}: One of the most basic security function one might uncover.  Worms usually spread by probing for other hosts. Filtering out hosts transmitting a lot of Flows with a single destination port, one could easily see which machines are infected and should be taken offline. 
@@ -15,13 +15,15 @@ In [Kilde] they discuss the use of NVisionIP to combat different security concer
 \end{itemize}
 
 \section{Initial research}
-In section[om netflow] we see how the raw format of the NetFlow packets look. Comparing how understandable this format is comparing to a visual representation will be the main object of this paper. How much more effective is visualization compared to the raw format read by machines. 
+In section \ref{netflow} we see how the raw format of the NetFlow packets look. Comparing how understandable this format is comparing to a visual representation will be the main object of this paper(omformulere. ikke helt riktig). How much more effective is visualization compared to the raw format read by machines. 
 
 To understand this, experiments will determine how quickly one can distinguish an attack from both the raw format, and the visual representation. 
 
 This is were D3.js will come to great use. It can be used to quickly develop simple interactive graphs that can be used to test up against each other.
 
 To be able to identify an DDoS attack, one can look at it from two angles. By finding someone whom is attacking, or someone whom is being attacked. In this case we will look at the second scenario. As mentioned earlier simply a peak in flows is not enough grounds to establish an actual attack. First of all, one will need to look for patterns of similar incidents, and what lies behind them.
+
+\newpage
 
 \section{Traits of a DDoS attack}
 In a Distributed Denial of Service attack there are a large number of hosts performing the attack. In many cases a lot of them are not even aware they are a part on an attack. This is called a botnet, derived from the words robot and network. Using compromised systems, called zombies, gives the attacker control of a large enough amount of hosts to perform a volume-based DDoS attack. 
@@ -37,17 +39,68 @@ Ampli cation is another advantage of the DrDoS attack method. By involving multi
 
 \includegraphics[scale=0.2]{drdos}
 
+\newpage
+
+
 \subsection{Raw NetFlow format}
-\includegraphics[scale=0.4]{netflow_ddos}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{netflow_ddos}
+\caption{Ten files in the provided files with the most flows}
+\end{figure}
+
 In the preceding example, there are multiple flows for UDP port 80 (hex value 0050). In addition, there are also flows for TCP port 53 (hex value 0035) and TCP port 80 (hex value 0050).
 
 The packets in these flows may be spoofed and may indicate an attempt to perform these attacks. It is advisable to compare the flows for TCP port 53 (hex value 0035) and TCP port 80 (hex value 0050) to normal baselines to aid in determining whether an attack is in progress.
 
-\todo{Finne kommandolinjeversjon av et DDoS angrep}
-
 
 \section{Using D3.js}
-Earlier in this paper it is mentioned that D3.js will be used to show examples of effective visualization of NetFlow data. It is assumed that the data has already been processed before it is made accessible to these examples. 
+Earlier in this paper it is mentioned that D3.js will be used to show examples of effective visualization of NetFlow data. It is assumed that the data has already been processed before it is made accessible to these examples. I was supplied with two months of anonymous data from UNINETT to get familiar with NetFlow and be able to use real data for my visualizations. This January of 2012 from Trondheim and Oslo NetFlow collectors. This means millions of data entries. 
+
+\subsection{Scope}
+The vast amounts of data should be presented with such a scope that is intuitive and easily understandable. Considering NetFlow packages is timestamped and sent from one source address to a specific destination address's port, one will have to chose which of these spectrum's to focus on. 
+
+\subsubsection{IP spectrum}
+Choosing the address spectrum as the main focus, one will have to find a way to represent the entire IPv4 spectrum. This is alone a challenge, and when it comes to IPv6, it becomes practically impossible. This results in relying more on the pre-processing of the data and segregating the IP-addresses actually worth noticing. In the data provided by UNINETT it is possible to list for example the top 10 files in size, meaning more flows. 
+In the data provided by UNINETT this search provided the results in figure \ref{topten}.
+
+\begin{figure}[h!]
+
+\includegraphics[scale=0.6]{top10}
+\caption{Ten files in the provided files with the most flows}
+\label{topten}
+\end{figure}
+
+From this simple preprocessing it is easy to see that in the time period between 1300-1400 on the 18th of January there was a clear peak in the number of flows having all the spots in the top 10. If we compare to the times with the lowest amount there is a different as they are a fraction of the others.
+
+\begin{figure}
+\includegraphics[scale=0.6]{bottom}
+\caption{The smallest files from the provided files}
+\end{figure}
+
+Trough this we create a csv file containing the hour in question going further in detail.
+Analysing which destination address is the most requested is the next step. 
+
+\begin{figure}
+\includegraphics[scale=0.6]{ip_top_list}
+\caption{Top ten used destination addresses within the timeframe 1300-1400, 18th of January}
+\end{figure}
+
+Again one specific address is clearly separated from the others. At this point we have gotten such into detail on the dataset, it is time to find the reason behind the results we have found. 
+These high numbers could be a DDoS attack, or other types of attacks, but not does not necessary ill willed. If we look at the list of top IP-addresses sending packets.
+\begin{figure}
+\includegraphics[scale=0.6]{top10_sa}
+\caption{Top ten used destination addresses within the timeframe 1300-1400, 18th of January}
+\end{figure}
+
+We see that the same IP-address, $192.239.62.2$, is here high up as well. Among hundreds of thousands of addresses in the spectrum. 
+
+If we were to figure out what application is the reason behind this traffic, one would have to include destination port, and a look at source port might also reveal something. 
+
+\todo{sjekke opp med portnr og}
+
+\subsubsection{Time spectrum}
+On the other side we have the time spectrum. In this case one looks at the amounts of flows within one time slot. Not down to the different IP-addresses. 
 
 \subsection{Number of flows to a certain host and port}
 This example shows how a simple graph can recognize a DDoS attack trough giving the option to see the number of netflows on different hosts and ports. 
