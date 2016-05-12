@@ -1,4 +1,17 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{LYBL04}
+
+\bibitem[Bos12]{D3}
+Michael Bostock.
+\newblock D3. js.
+\newblock {\em Data Driven Documents}, 2012.
+
+\bibitem[cis16]{cisco_ddos}
+2016.
+
+\bibitem[Fri08]{friedman}
+Vitaly Friedman.
+\newblock Data visualization and infographics  smashing magazine, 2008.
 
 \bibitem[LYBL04]{nvisionip}
 K.~Lakkaraju, W.~Yurcik, R.~Bearavolu, and A.~J. Lee.
@@ -14,6 +27,14 @@ Kiran Lakkaraju, William Yurcik, and Adam~J. Lee.
 \newblock In {\em Proceedings of the 2004 ACM Workshop on Visualization and
   Data Mining for Computer Security}, VizSEC/DMSEC '04, pages 65--72, New York,
   NY, USA, 2004. ACM.
+
+\bibitem[nfd16]{nfdump}
+2016.
+
+\bibitem[SST{\etalchar{+}}16]{cisco_netflow}
+Products Services, Cisco Software, Cisco Technologies, Management
+  Instrumentation, Cisco NetFlow, Data Literature, and White Papers.
+\newblock Introduction to cisco ios netflow - a technical overview, 2016.
 
 \bibitem[TGM83]{tufte}
 Edward~R Tufte and PR~Graves-Morris.

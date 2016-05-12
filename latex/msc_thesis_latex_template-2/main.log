@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  20 APR 2016 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  12 MAY 2016 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1866,36 +1866,37 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 \glo@main@file=\write6
 \openout6 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 57.
+Package glossaries Info: Writing glossary file main.glo on input line 58.
 \glo@acronym@file=\write7
 \openout7 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 57.
- (./main.aux (./preface.aux) (./background.aux) (./research.aux) (./challenges.
-aux))
+Package glossaries Info: Writing glossary file main.acn on input line 58.
+ (./main.aux (./abstract_norwegian.aux) (./preface.aux)
+(./background.aux) (./research.aux) (./d3andnetflow.aux) (./challenges.aux)
+(./appendixA.aux) (./AppendixB.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1911,7 +1912,7 @@ LaTeX Font Info:    ... okay on input line 59.
 \makeMPintoPDFobject=\count347
 \everyMPtoPDFconversion=\toks72
 )
-LaTeX Info: Redefining \microtypecontext on input line 59.
+LaTeX Info: Redefining \microtypecontext on input line 60.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1926,7 +1927,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box84
-Package hyperref Info: Link coloring ON on input line 59.
+Package hyperref Info: Link coloring ON on input line 60.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1938,10 +1939,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 59.
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
-LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
 (./main.out) (./main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
@@ -1963,14 +1964,14 @@ e
 ))
 \c@lstlisting=\count349
 
-ABD: EveryShipout initializing macros
-<./figs/ntnu-logo.pdf, id=103, 241.4922pt x 52.79724pt>
+(./main.glsdefs) ABD: EveryShipout initializing macros
+<./figs/ntnu-logo.pdf, id=131, 241.4922pt x 52.79724pt>
 File: ./figs/ntnu-logo.pdf Graphic file (type pdf)
 
 <use ./figs/ntnu-logo.pdf>
-Package pdftex.def Info: ./figs/ntnu-logo.pdf used on input line 65.
+Package pdftex.def Info: ./figs/ntnu-logo.pdf used on input line 66.
 (pdftex.def)             Requested size: 170.71652pt x 37.32436pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 65.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 66.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1979,14 +1980,14 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Calculating math sizes for size <11.49994> on input line 65
+LaTeX Font Info:    Calculating math sizes for size <11.49994> on input line 66
 .
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11.49994> on input line 65.
+(Font)              <11.49994> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8.04991> on input line 65.
+(Font)              <8.04991> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.74997> on input line 65.
+(Font)              <5.74997> on input line 66.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -2000,318 +2001,505 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figs/
 ntnu-logo.pdf>] [2
 
+] (./problem_description.texpdfTeX warning (ext4): destination with the same id
+entifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 \end{titlingpage}
+                       [1]pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.ii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 \end{titlingpage}
+                       [2
+
+])
+\openout2 = `abstract_norwegian.aux'.
+
+ (./abstract_norwegian.tex)pdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79  \include{abstract_norwegian}
+                                   [1
+
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.80  \cleardoublepage
+                       [2
+
+
 ]
 \openout2 = `preface.aux'.
 
- (./preface.tex) [3
-
+ (./preface.tex [3
 
 ] [4
 
+]) [5] [6
 
-] (./main.toc) [5] [6
 
-] (./main.lof) [7]
-[8
+] (./main.toc [7])
+[8] (./main.lof) [9
 
-] (./main.lot) [9] [10
+] [10
 
-] (./main.loa) [11
+] (./main.lol) [11] [12
 
-] [12
+] (./main.acr) [13
 
-]
-No file main.gls.
-[13] [14
 
-]
-No file main.acr.
-[15] [16
+] [14
 
 ]
 \openout2 = `background.aux'.
 
- (./background.tex [1
+
+(./background.tex [1
 
 
-]
-<netflow_cache.png, id=233, 1280.785pt x 645.41125pt>
+] <netflow_cache.png, id=321, 1280.785pt x 645.41125pt>
 File: netflow_cache.png Graphic file (type png)
- <use netflow_cache.png>
+
+<use netflow_cache.png>
 Package pdftex.def Info: netflow_cache.png used on input line 28.
 (pdftex.def)             Requested size: 256.15247pt x 129.07996pt.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 51.
-
-[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
-) has been already used, duplicate ignored
+ [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.52 
-      <./netflow_cache.png>]
+l.51 ...e inn hvordan det ser ut i kommandolinjen}
+                                                   <./netflow_cache.png>]
 
 LaTeX Warning: Marginpar on page 3 moved by 64.02469pt.
 
-<netflow_arch.png, id=241, 667.49374pt x 272.01625pt>
+<netflow_arch.png, id=334, 667.49374pt x 272.01625pt>
 File: netflow_arch.png Graphic file (type png)
  <use netflow_arch.png>
 Package pdftex.def Info: netflow_arch.png used on input line 67.
 (pdftex.def)             Requested size: 333.74606pt x 136.00778pt.
+
+<nfdump_operation.png, id=339, 741.77126pt x 388.45125pt>
+File: nfdump_operation.png Graphic file (type png)
+
+<use nfdump_operation.png>
+Package pdftex.def Info: nfdump_operation.png used on input line 78.
+(pdftex.def)             Requested size: 296.70325pt x 155.37773pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<nfdump2.png, id=340, 722.7pt x 369.38pt>
+File: nfdump2.png Graphic file (type png)
+ <use nfdump2.png>
+Package pdftex.def Info: nfdump2.png used on input line 84.
+(pdftex.def)             Requested size: 289.07487pt x 147.74937pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.75 
-      <./netflow_arch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+l.93 \item \textbf
+                  {v9:} v9 is opposite of its predecessor dynamic. The colle...
+ <./netflow_arch.png>] [4pdfTeX warning (ext4): destination with the same ident
+ifier (name{figure.1.3}) has been already used, duplicate ignored
 
- []
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 \end{itemize}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.1.4}) has been already used, duplicate ignored
 
-[4] <attentive.png, id=256, 1196.47pt x 303.1325pt>
-File: attentive.png Graphic file (type png)
- <use attentive.png>
-Package pdftex.def Info: attentive.png used on input line 103.
-(pdftex.def)             Requested size: 358.94377pt x 90.94044pt.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.96 \end{itemize}
+                   <./nfdump_operation.png> <./nfdump2.png>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 102.
 
-<pre_attentive.png, id=257, 1176.395pt x 296.10625pt>
-File: pre_attentive.png Graphic file (type png)
- <use pre_attentive.png>
-Package pdftex.def Info: pre_attentive.png used on input line 108.
-(pdftex.def)             Requested size: 352.92123pt x 88.83255pt.
+<top10example.png, id=361, 895.345pt x 239.89626pt>
+File: top10example.png Graphic file (type png)
+ <use top10example.png>
+Package pdftex.def Info: top10example.png used on input line 110.
+(pdftex.def)             Requested size: 358.13165pt x 95.95679pt.
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.119 \item T
+l.122 C
+       ombining several parameters through visualization could reveal someth...
+ <./top10example.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
+
+ []
+
+[6] <attentive.png, id=383, 1196.47pt x 303.1325pt>
+File: attentive.png Graphic file (type png)
+ <use attentive.png>
+Package pdftex.def Info: attentive.png used on input line 149.
+(pdftex.def)             Requested size: 358.94377pt x 90.94044pt.
+
+<pre_attentive.png, id=384, 1176.395pt x 296.10625pt>
+File: pre_attentive.png Graphic file (type png)
+ <use pre_attentive.png>
+Package pdftex.def Info: pre_attentive.png used on input line 154.
+(pdftex.def)             Requested size: 352.92123pt x 88.83255pt.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.165 \item T
              o use data to provide knowledge in the most effective manner po...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.119 \item T
+l.165 \item T
              o use data to provide knowledge in the most effective manner po...
  <./attentive.png> <./pre_attentive.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 189.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 189
+.
+
+[8]
+
+Package Listings Warning: Text dropped after begin of listing on input line 201
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 208
+.
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 211.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+<graph.png, id=514, 593.21625pt x 266.9975pt>
+File: graph.png Graphic file (type png)
+ <use graph.png>
+Package pdftex.def Info: graph.png used on input line 306.
+(pdftex.def)             Requested size: 296.60739pt x 133.49841pt.
+) [11 <./graph.png>]
+\openout2 = `research.aux'.
+
+ (./research.tex [12
+
+
+
+] [13] [14]
+<drdos.png, id=550, 1039.885pt x 605.26125pt>
+File: drdos.png Graphic file (type png)
+ <use drdos.png>
+Package pdftex.def Info: drdos.png used on input line 46.
+(pdftex.def)             Requested size: 207.97331pt x 121.0501pt.
+) [15 <./drdos.png>] [16]
+\openout2 = `d3andnetflow.aux'.
+
+ (./d3andnetflow.tex <top10.png, id=561, 574.145pt x 156.585pt>
+File: top10.png Graphic file (type png)
+
+<use top10.png>
+Package pdftex.def Info: top10.png used on input line 15.
+(pdftex.def)             Requested size: 344.48965pt x 93.95172pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bottom.png, id=562, 566.115pt x 242.9075pt>
+File: bottom.png Graphic file (type png)
+ <use bottom.png>
+Package pdftex.def Info: bottom.png used on input line 23.
+(pdftex.def)             Requested size: 339.67162pt x 145.7456pt.
+
+<ip_top_list.png, id=563, 569.12625pt x 155.58125pt>
+File: ip_top_list.png Graphic file (type png)
+ <use ip_top_list.png>
+Package pdftex.def Info: ip_top_list.png used on input line 31.
+(pdftex.def)             Requested size: 341.47838pt x 93.34946pt.
+
+[17
+
+
+
+] [18pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.37 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.37 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.37 
+      <./top10.png> <./bottom.png> <./ip_top_list.png>]
+<top10_sa.png, id=576, 604.2575pt x 157.58875pt>
+File: top10_sa.png Graphic file (type png)
+ <use top10_sa.png>
+Package pdftex.def Info: top10_sa.png used on input line 39.
+(pdftex.def)             Requested size: 362.5573pt x 94.55397pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[][]
+ []
+
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.61 
+      <./top10_sa.png>] <yearly.png, id=590, 955.57pt x 146.5475pt>
+File: yearly.png Graphic file (type png)
+
+<use yearly.png>
+Package pdftex.def Info: yearly.png used on input line 67.
+(pdftex.def)             Requested size: 382.22122pt x 58.61795pt.
+
+Overfull \hbox (18.22122pt too wide) in paragraph at lines 67--68
+[][]
+ []
+
+<ip_ports.png, id=591, 958.58125pt x 461.725pt>
+File: ip_ports.png Graphic file (type png)
+ <use ip_ports.png>
+Package pdftex.def Info: ip_ports.png used on input line 76.
+(pdftex.def)             Requested size: 335.50847pt x 161.60617pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.80 \newpage
+              <./yearly.png>] <chart.png, id=600, 1335.99126pt x 334.24875pt>
+File: chart.png Graphic file (type png)
+
+<use chart.png>
+Package pdftex.def Info: chart.png used on input line 84.
+(pdftex.def)             Requested size: 400.80048pt x 100.27539pt.
+
+Overfull \hbox (36.80048pt too wide) in paragraph at lines 84--85
+[][]
+ []
+
+) [21pdfTeX warning (ext4): destination with the same identifier (name{figure.3
+.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.122 \include{d3andnetflow}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.3.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.122 \include{d3andnetflow}
+                             <./ip_ports.png> <./chart.png>]
+\openout2 = `challenges.aux'.
+
+ (./challenges.tex
+[22
+
+
+
+]) [23] [24
+
+
+] (./main.bbl
+bibitemlist
+
+! Package inputenc Error: Unicode char \u8: not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...ock Data visualization and infographics 
+                                                   smashing magazine, 2008.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [25
+
+] [26
+
+] (./main.tdo) [27]
+\openout2 = `appendixA.aux'.
+
+ (./appendixA.tex [28
+
+
+]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [6]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 164.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 164.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 165.
+) [29]
+Overfull \hbox (2.80353pt too wide) in paragraph at lines 93--94
+[][] 
+ []
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7] [8]
-<graph.png, id=387, 593.21625pt x 266.9975pt>
-File: graph.png Graphic file (type png)
- <use graph.png>
-Package pdftex.def Info: graph.png used on input line 260.
-(pdftex.def)             Requested size: 296.60739pt x 133.49841pt.
-) [9 <./graph.png>]
-\openout2 = `research.aux'.
+Overfull \hbox (2.80353pt too wide) in paragraph at lines 93--94
+[][] 
+ []
 
- (./research.tex [10
-
-
-
-] [11] [12]
-<botnet.jpg, id=412, 1218.5525pt x 902.37125pt>
-File: botnet.jpg Graphic file (type jpg)
- <use botnet.jpg>
-Package pdftex.def Info: botnet.jpg used on input line 31.
-(pdftex.def)             Requested size: 243.70618pt x 180.47105pt.
-
-<cloud.jpg, id=413, 1221.56375pt x 935.495pt>
-File: cloud.jpg Graphic file (type jpg)
- <use cloud.jpg>
-Package pdftex.def Info: cloud.jpg used on input line 35.
-(pdftex.def)             Requested size: 244.30843pt x 187.09567pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <./botnet.jpg> <./cloud.jpg>] <drdos.png, id=418, 1039.885pt x 605.26125pt
->
-File: drdos.png Graphic file (type png)
-
-<use drdos.png>
-Package pdftex.def Info: drdos.png used on input line 40.
-(pdftex.def)             Requested size: 207.97331pt x 121.0501pt.
- [14 <./drdos.png>]
-<netflow_ddos.png, id=424, 645.41125pt x 634.37pt>
-File: netflow_ddos.png Graphic file (type png)
- <use netflow_ddos.png>
-Package pdftex.def Info: netflow_ddos.png used on input line 48.
-(pdftex.def)             Requested size: 322.70483pt x 317.18422pt.
-
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.59 
-      <./netflow_ddos.png>] <top10.png, id=432, 574.145pt x 156.585pt>
-File: top10.png Graphic file (type png)
-
-<use top10.png>
-Package pdftex.def Info: top10.png used on input line 69.
-(pdftex.def)             Requested size: 344.48965pt x 93.95172pt.
- <bottom.png, id=433, 566.115pt x 242.9075pt>
-File: bottom.png Graphic file (type png)
- <use bottom.png>
-Package pdftex.def Info: bottom.png used on input line 77.
-(pdftex.def)             Requested size: 339.67162pt x 145.7456pt.
-
-<ip_top_list.png, id=434, 569.12625pt x 155.58125pt>
-File: ip_top_list.png Graphic file (type png)
- <use ip_top_list.png>
-Package pdftex.def Info: ip_top_list.png used on input line 85.
-(pdftex.def)             Requested size: 341.47838pt x 93.34946pt.
-
-<top10_sa.png, id=435, 604.2575pt x 157.58875pt>
-File: top10_sa.png Graphic file (type png)
- <use top10_sa.png>
-Package pdftex.def Info: top10_sa.png used on input line 92.
-(pdftex.def)             Requested size: 362.5573pt x 94.55397pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-[][]
- []
-
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.95 
-      <./top10.png>]
-Underfull \vbox (badness 1490) has occurred while \output is active []
-
- [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.108 \todo{Screenshot}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{figure.2.4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.108 \todo{Screenshot}
-                        <./bottom.png> <./ip_top_list.png>]
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 108--108
-[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
+ [30]
+Overfull \hbox (79.3043pt too wide) in paragraph at lines 94--95
+[][] 
  []
 
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 108--108
-[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 108--108
-[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
- []
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (2.7037pt too wide) in paragraph at lines 108--108
-[][][][]\T1/lmr/m/n/10 (-20) Screenshot  
- []
+ [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.5}) has been already used, duplicate ignored
+ [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.116 \include{research}
-                         <./top10_sa.png>]
-\openout2 = `challenges.aux'.
+ [36])
+[37]
+\openout2 = `AppendixB.aux'.
 
- (./challenges.tex) [19
+ (./AppendixB.tex [38
 
-
-
-] [20
 
 
 ]
-(./main.bbl
-bibitemlist
-) [21
 
-] [22
+Package Listings Warning: Text dropped after begin of listing on input line 6.
 
-] (./main.tdo) [23]
+
+Package Listings Warning: Text dropped after begin of listing on input line 26.
+
+
+[39]
+
+Package Listings Warning: Text dropped after begin of listing on input line 50.
+
+
+[40] [41]) [42]
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
-\tf@lot=\write11
-\openout11 = `main.lot'.
+\tf@lol=\write11
+\openout11 = `main.lol'.
 
-\tf@loa=\write12
-\openout12 = `main.loa'.
+\tf@tdo=\write12
+\openout12 = `main.tdo'.
 
-\tf@tdo=\write13
-\openout13 = `main.tdo'.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+ (./main.aux (./abstract_norwegian.aux) (./preface.aux)
+(./background.aux) (./research.aux) (./d3andnetflow.aux) (./challenges.aux)
+(./appendixA.aux) (./AppendixB.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6F7A3460D29DEEC378ED208C80FD3FEE;1883.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
- (./main.aux (./preface.aux) (./background.aux)
-(./research.aux) (./challenges.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 15D33BDB34B403C5D076B0934A4FD30B;1478
-(rerunfilecheck)             After:  DA733C488983D9B5E273B3ED535E4296;1543.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32165 strings out of 493089
- 543001 string characters out of 6134841
- 1025406 words of memory out of 5000000
- 34652 multiletter control sequences out of 15000+600000
- 96589 words of font info for 129 fonts, out of 8000000 for 9000
+ 34171 strings out of 493089
+ 569912 string characters out of 6134841
+ 1179045 words of memory out of 5000000
+ 36044 multiletter control sequences out of 15000+600000
+ 96921 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,78p,1856b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/
-fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
-ps/lm/lm-mathsy.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/l
-mbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm
-/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss12.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (39 pages, 3984758 bytes).
+ 68i,13n,95p,1856b,2223s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.2.3} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.2.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.2.1} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2015
+/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fo
+nts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips
+/lm/lm-mathsy.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmb
+x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/l
+mr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (60 pages, 3909328 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 494 compressed objects within 5 object streams
- 190 named destinations out of 1000 (max. 500000)
- 24851 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 1430 PDF objects out of 1440 (max. 8388607)
+ 1307 compressed objects within 14 object streams
+ 758 named destinations out of 1000 (max. 500000)
+ 24922 words of extra memory for PDF output out of 29859 (max. 10000000)
 

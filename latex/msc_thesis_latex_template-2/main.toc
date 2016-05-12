@@ -1,33 +1,47 @@
 \select@language {norsk}
 \select@language {english}
 \select@language {english}
+\select@language {norsk}
 \select@language {english}
-\contentsline {chapter}{List of Figures}{vii}{section*.1}
-\contentsline {chapter}{List of Tables}{ix}{section*.2}
-\contentsline {chapter}{List of Algorithms}{xi}{chapter*.3}
+\contentsline {chapter}{List of Figures}{ix}{section*.1}
+\contentsline {chapter}{Listings}{xi}{section*.2}
+\contentsline {chapter}{List of Acronyms}{xiii}{section*.3}
 \contentsline {chapter}{\chapternumberline {1}Background}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}NetFlow}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}How does it work?}{1}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Main components}{3}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}Data visualization}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Characteristics}{4}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Visual perception}{4}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Data presentation architecture}{5}{subsection.1.2.3}
-\contentsline {subsubsection}{Objectives}{5}{section*.6}
-\contentsline {subsubsection}{Scope}{6}{section*.7}
-\contentsline {section}{\numberline {1.3}D3.js}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}How does it work?}{6}{subsection.1.3.1}
-\contentsline {chapter}{\chapternumberline {2}Research}{11}{chapter.2}
-\contentsline {section}{\numberline {2.1}Related work}{11}{section.2.1}
-\contentsline {section}{\numberline {2.2}Initial research}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Traits of a DDoS attack}{13}{section.2.3}
+\contentsline {subsection}{\numberline {1.1.3}nfdump}{3}{subsection.1.1.3}
+\contentsline {subsubsection}{v5,v9 and IPfix}{4}{section*.8}
+\contentsline {subsubsection}{Example of use}{5}{section*.10}
+\contentsline {section}{\numberline {1.2}Data visualization}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Characteristics}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Visual perception}{6}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Data presentation architecture}{7}{subsection.1.2.3}
+\contentsline {subsubsection}{Objectives}{7}{section*.11}
+\contentsline {subsubsection}{Scope}{8}{section*.12}
+\contentsline {section}{\numberline {1.3}D3.js}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}How does it work?}{8}{subsection.1.3.1}
+\contentsline {chapter}{\chapternumberline {2}Research}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Related work}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Initial research}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Traits of a DDoS attack}{15}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Raw NetFlow format}{15}{subsection.2.3.1}
-\contentsline {section}{\numberline {2.4}Using D3.js}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Scope}{16}{subsection.2.4.1}
-\contentsline {subsubsection}{IP spectrum}{16}{section*.8}
-\contentsline {subsubsection}{Time spectrum}{17}{section*.10}
-\contentsline {subsection}{\numberline {2.4.2}Number of flows to a certain host and port}{18}{subsection.2.4.2}
-\contentsline {chapter}{\chapternumberline {3}Challenges}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Large data sets}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}IP-spectrum}{19}{subsection.3.1.1}
-\contentsline {chapter}{References}{21}{section*.13}
+\contentsline {chapter}{\chapternumberline {3}D3.js and NetFlow}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Using D3.js}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Scope}{17}{subsection.3.1.1}
+\contentsline {subsubsection}{IP spectrum}{17}{section*.13}
+\contentsline {subsubsection}{Time spectrum}{19}{section*.15}
+\contentsline {section}{\numberline {3.2}Number of flows to a certain host and port}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Scope in D3.js}{19}{subsection.3.2.1}
+\contentsline {subsubsection}{File structure}{20}{section*.17}
+\contentsline {subsubsection}{Overview}{20}{section*.18}
+\contentsline {subsubsection}{IP-addresses and ports}{20}{section*.19}
+\contentsline {subsubsection}{24-hour chart}{21}{section*.20}
+\contentsline {chapter}{\chapternumberline {4}Challenges}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Large data sets}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}IP-spectrum}{23}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Increasing number of flows}{23}{subsection.4.1.2}
+\contentsline {chapter}{References}{25}{section*.22}
+\vspace {1em}\noindent \bfseries Appendices\par \vspace {-.5em}
+\contentsline {appendix}{\chapternumberline {A}Appendix A}{29}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Appendix B}{39}{appendix.B}

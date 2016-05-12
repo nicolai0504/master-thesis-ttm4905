@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function cleanIpList(){
+	cleanIpList = ''
+	for (( i = 1; i < 11; i++ )); do
+		cleanIpList+=$((awk -F',' 'NR == $i { print $5}' $(printf "%02d" $1).csv)) 
+	done
+}
+echo cleanIpList() 1
+
+#echo "nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $1)/nfcapd.201201$(printf "%02d" $1)0000:nfcapd.201201$(printf "%02d" $1)2355 -n 10 -s dstport -o csv $iplist > /home/eeglarse/flowtest/totaltest2.csv"
+

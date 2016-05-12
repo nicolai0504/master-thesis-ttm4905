@@ -1,0 +1,135 @@
+\chapter{Appendix B}
+\label{chp:appendixb} 
+Appendix B contains the scripts used to create .csv files from all the data made available from UNINETT.
+
+A script that creates .csv files for every nfcapd file in a day. This script is run by another short script that runs it 31 times for each day.
+\begin{lstlisting}[caption={Creates .csv files for every nfcapd file in a day}][language=bash]
+#!/bin/bash
+mkdir /home/eeglarse/flowtest/2012_02/$(printf "%02d" $1)
+clock_converter(){
+	if [ $(($1 % 100)) -gt 59 ]; then
+		return $(($1 % 100))
+	fi
+	if [ $(($1 % 100)) -lt 60 ]; then
+		echo $(printf "%04d" $1)
+		return $(($1 % 100))
+	fi
+	}
+
+for (( c=0; c<=2355; c += 5 ))
+do
+   nfdump -r $(printf "%02d" $1)/nfcapd.201202$(printf "%02d" $1)$( clock_converter $c ) -n 10 -s srcip -o csv > /home/eeglarse/flowtest/2012_02/$(printf "%02d" $1)/$( clock_converter $c ).csv
+done
+\end{lstlisting}
+
+A script that fetches the total amount of flows for each day and creates a file with the values.
+\begin{lstlisting}[caption={Total amount of flows for each day}][language=bash]
+
+
+clock_converter(){
+	if [ $(($1 % 100)) -gt 59 ]; then
+		return $(($1 % 100))
+	fi
+	if [ $(($1 % 100)) -lt 60 ]; then
+		echo $(printf "%04d" $1)
+		return $(($1 % 100))
+	fi
+	}
+
+
+for (( c=0; c<=2355; c += 5 ))
+do
+   total_file=$(awk -F',' 'NR == 15 { print $1}' /home/eeglarse/flowtest/2012_02/$(printf "%02d" $1)/$( clock_converter $c ).csv)
+   echo $total_file >> testfile2$1.csv
+done
+
+awk '{s+=$1} END {print s}' testfile2$1.csv >>datefile2.csv
+
+\end{lstlisting}
+A script that finds the top 10 used IP-adresses for each day. 
+\begin{lstlisting}[caption={Top 10 used IP-adresses for each day}][language=bash]
+
+nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $1)/nfcapd.201201$(printf "%02d" $1)0000:nfcapd.201201$(printf "%02d" $1)2355 -n 10 -s dstip -o csv > /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv
+\end{lstlisting}
+
+A script that creates a list the top 10 most popular ports, based on the 10 most popular IP-addresses. 
+\begin{lstlisting}[language=bash]
+ip_string=''
+ip=$(awk -F',' 'NR == 2 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 3 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 4 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 5 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 6 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 7 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 8 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 9 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 10 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip' or '
+ip=$(awk -F',' 'NR == 11 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $1).csv)
+ip_string+='dst ip '$ip
+
+
+nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $1)/nfcapd.201201$(printf "%02d" $1)0000:nfcapd.201201$(printf "%02d" $1)2355 -n 10 -s dstport $iplist -o csv > /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $1).csv
+\end{lstlisting}
+A script that uses the 10 most popular IP-adresses and their corresponding ports to find the number of flows sent to each port on each IP-address. 
+\begin{lstlisting}[language=bash]
+
+#!/bin/bash
+for (( i = 1; i < 31; i++ )); do
+	iplist=()
+	ip=$(awk -F',' 'NR == 2 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[0]=$ip
+	ip2=$(awk -F',' 'NR == 3 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[1]=$ip2
+	ip=$(awk -F',' 'NR == 4 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[2]=$ip
+	ip=$(awk -F',' 'NR == 5 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[3]=$ip
+	ip=$(awk -F',' 'NR == 6 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[4]=$ip
+	ip=$(awk -F',' 'NR == 7 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[5]=$ip
+	ip=$(awk -F',' 'NR == 8 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[6]=$ip
+	ip=$(awk -F',' 'NR == 9 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[7]=$ip
+	ip=$(awk -F',' 'NR == 10 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[8]=$ip
+	ip=$(awk -F',' 'NR == 11 { print $5}' /home/eeglarse/flowtest/top10/$(printf "%02d" $i).csv)
+	iplist[9]=$ip
+	portlist=()
+	ip=$(awk -F',' 'NR == 2 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[0]=$ip
+	ip=$(awk -F',' 'NR == 3 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[1]=$ip
+	ip=$(awk -F',' 'NR == 4 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[2]=$ip
+	ip=$(awk -F',' 'NR == 5 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[3]=$ip
+	ip=$(awk -F',' 'NR == 6 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[4]=$ip
+	ip=$(awk -F',' 'NR == 7 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[5]=$ip
+	ip=$(awk -F',' 'NR == 8 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[6]=$ip
+	ip=$(awk -F',' 'NR == 9 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[7]=$ip
+	ip=$(awk -F',' 'NR == 10 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[8]=$ip
+	ip=$(awk -F',' 'NR == 11 { print $5}' /home/eeglarse/flowtest/top10/top10port/$(printf "%02d" $i).csv)
+	portlist[9]=$ip
+	for (( s = 0; s < 10; s++ )); do
+	   	for (( j = 0; j < 10; j++ )); do
+	   		$(nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $i)/nfcapd.201201$(printf "%02d" $i)0000:nfcapd.201201$(printf "%02d" $i)2355 -n 10 -s dstport -o csv 'dst ip ${iplist[$s]} and dst port ${portlist[$j]}' -o csv)
+	   	done
+	done
+done
+\end{lstlisting}

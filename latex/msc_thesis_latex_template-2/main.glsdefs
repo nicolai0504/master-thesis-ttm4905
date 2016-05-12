@@ -1,0 +1,30 @@
+\ifglsentryexists{lvm}{}%
+{%
+\gls@defglossaryentry{lvm}%
+{%
+name={LVM},%
+sort={LVM},%
+type={acronym},%
+first={Logical Volume Manager\glsspace (LVM)},%
+firstplural={Logical Volume Manager\acrpluralsuffix \glsspace (LVM\acrpluralsuffix )},%
+text={LVM},%
+plural={LVM\acrpluralsuffix },%
+description={Logical Volume Manager},%
+descriptionplural={Logical Volume Manager\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Volume Manager},%
+longplural={Logical Volume Managers},%
+short={LVM},%
+shortplural={LVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

@@ -5,7 +5,7 @@
 \usepackage{todonotes}
 \usepackage{listings}
 \usepackage{color}
-
+\usepackage{appendix}
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -41,8 +41,9 @@
 
 \title{ Visualization of large scale Netflow data} % The title of your assignement; NB use \newlinetitle to start a newline
 \author{Nicolai Eeg-Larsen} % Your firstname and lastname
-\professor{Firstname Lastname, Affiliation} % Affiliation = ITEM for instance
-\supervisor{Firstname Lastname, Affiliation}
+\professor{Yuming Jiang, ITEM} % Affiliation = ITEM for instance
+\supervisor{Arne Øslebø, UNINETT}
+\supervisor{Otto Wittner, UNINETT}
 
 %% Uncomment the following in case you want subfigures; note that there will be a warning for the caption package
 % \let\subcaption\undefined
@@ -66,17 +67,17 @@
 
 %% Only for the master's thesis; for the project report the description is taken from It's Learning and added by the department
 % \selectlanguage{english} % Change to 'norsk' if you are writing in Norwegian
-% \input{problem_description}
-% \cleardoublepage
+ \input{problem_description}
+ \cleardoublepage
 
 %% There must be an abstract in English, even though the main text is in Norwegian
 \selectlanguage{english}
 \cleardoublepage
 
 %% Only for the master's thesis; if the main text is in English and you can write Norwegian, there must be an abstract in Norwegian as well.
-% \selectlanguage{norsk}
-% \include{abstract_norwegian}
-% \cleardoublepage
+ \selectlanguage{norsk}
+ \include{abstract_norwegian}
+ \cleardoublepage
 
 \selectlanguage{english}% Change to 'norsk' if you are writing in Norwegian
 
@@ -92,46 +93,54 @@
 \listoffigures
 \cleardoublepage
 
-%% include if relevant
-\listoftables
+\lstlistoflistings
 \cleardoublepage
-
+%
 %% include if relevant
-\listofalgorithms
-\addcontentsline{toc}{chapter}{List of Algorithms}
-\cleardoublepage
+%\listoftables
+%\cleardoublepage
+%
+%%% include if relevant
+%\listofalgorithms
+%\addcontentsline{toc}{chapter}{List of Algorithms}
+%\cleardoublepage
+%
+%%% include if relevant
+%\printglossary[title=List of Symbols, style=long]
+%\cleardoublepage
+%\glsaddall
 
-%% include if relevant
-\printglossary[title=List of Symbols, style=long]
-\cleardoublepage
-\glsaddall[]
-
-%% include if relevant
-\printglossary[title=List of Acronyms,type=\acronymtype] % prints just the list of acronyms
+%%% include if relevant
+\printglossary[title=List of Acronyms,type=\acronymtype] 
+% prints just the list of acronyms
 \cleardoublepage
 
 \pagenumbering{arabic}
 \pagestyle{ruled}
 \include{background}
 \include{research}
+\include{d3andnetflow}
 \include{challenges}
 \cleardoublepage
 %% include here the other chapters
+
 
 \renewcommand*{\bibname}{References}
 \bibliographystyle{alpha}
 \bibliography{main}
 \listoftodos
 
-%% Uncomment the following if you have any appendix
-% \appendix
-% \addtocontents{toc}{%
-%  \protect\vspace{1em}% 
-%  \protect\noindent \bfseries \appendixtocname\protect\par
-%  \protect\vspace{-.5em}%
-% }
-% \renewcommand{\chaptername}{\appendixname}
-%% include below possible appendices (chapters)
 
+% Uncomment the following if you have any appendix
+ \appendix
+ \addtocontents{toc}{%
+  \protect\vspace{1em}% 
+  \protect\noindent \bfseries \appendixtocname\protect\par
+  \protect\vspace{-.5em}%
+ }
+ \renewcommand{\chaptername}{\appendixname}
+% include below possible appendices (chapters)
+\include{appendixA}
+\include{AppendixB}
 
 \end{document} 

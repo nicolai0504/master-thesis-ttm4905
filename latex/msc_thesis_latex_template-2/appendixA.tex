@@ -1,0 +1,391 @@
+\chapter{Appendix A}
+\label{chp:appendixa} 
+\begin{lstlisting}[language=HTML]
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+
+rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 6pt;
+        font-family: Consolas, courier;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+      .RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-11{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}
+
+.header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+}
+</style>
+<body>
+
+<!-- <div id="option">
+    <input name="updateButton" 
+           type="button" 
+           value="Previous" 
+           onclick="previousData()" />
+</div>
+
+<div id="option">
+    <input name="updateButton" 
+           type="button" 
+           value="Next" 
+           onclick="nextData()" />
+</div> -->
+
+<!-- load the d3.js library -->    
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type='text/javascript' src='knockout-min.js'></script>
+
+<div style="font-size: 50px; text-align: center;margin-top: 20px;margin-bottom: 20px"data-bind="text: currentDate()"></div>
+<div id="year" style="margin-top=20px"></div>
+<div id="area1"></div>
+<div id="area2" style="margin-bottom:20px"></div>
+
+<script>
+
+function AppViewModel(){
+  this.currentDay = ko.observable(1);
+  availableCountries = ko.observableArray(['129.432.123.3', '129.987.123.422', '987.654.432.123','456.423.0.124','126.674.234.543','129.432.123.3', '129.987.123.422', '987.654.432.123','456.423.0.124','126.674.234.543','129.432.123.3', '129.987.123.422', '987.654.432.123','456.423.0.124','126.674.234.543']);
+  availablePorts = ko.observableArray(['80','8080','8000','7000','9000','8888','80','8080','8000','7000','9000','8888'])
+  this.chosenIp = ko.observable(availableCountries()[0]);
+  this.chosenPort = ko.observable(availablePorts()[0]);
+  this.currentYear = ko.observable(2008);
+  this.currentMonth = ko.observable(1);
+  this.currentDate = ko.observable('2008-01-01');
+}
+
+var parseDate = d3.time.format("%d-%b-%y").parse;
+
+ko.applyBindings(AppViewModel);
+
+// ** Update data section (Called from the onclick)
+
+
+function firstGraph(){
+var width = 2000,
+    height = 250,
+    cellSize = 35;
+    date = "01-01-2012" // cell size
+
+var percent = d3.format(".1%"),
+    format = d3.time.format("%Y-%m-%d");
+
+var color = d3.scale.quantize()
+    .domain([-.5, .5])
+    .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+
+var svg = d3.select("#year").selectAll("svg")
+    .data(d3.range(2008, 2009))
+  .enter().append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("class", "RdYlGn")
+    .append("g")
+    .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+
+svg.append("text")
+    .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+    .style("text-anchor", "middle")
+    .text(function(d) { return d; });
+
+var rect = svg.selectAll(".day")
+    .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+   .enter().append("rect")
+    .attr("class", "day")
+    .attr("width", cellSize)
+    .attr("height", cellSize)
+    .attr("x", function(d) { return d3.time.weekOfYear(d) * cellSize; })
+    .attr("y", function(d) { return d.getDay() * cellSize; })
+    .on("click", function(d){
+      heatmapChart("heatmap/"+d+".csv");
+      currentDate(d);
+      console.log(currentDate());
+      updateGraph();
+    })
+    .datum(format);
+
+rect.append("title")
+    .text(function(d) { return d; });
+
+svg.selectAll(".month")
+    .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+  .enter().append("path")
+    .attr("class", "month")
+    .attr("d", monthPath);
+
+d3.csv("year/dji.csv", function(error, csv) {
+  if (error) throw error;
+
+  var data = d3.nest()
+    .key(function(d) { return d.Date; })
+    .rollup(function(d) { return d[0].High; })
+    .map(csv);
+
+  rect.filter(function(d) { return d in data; })
+      .attr("class", function(d) { return "day " + color(data[d]%11); })
+    .select("title")
+      .text(function(d) { return d + ": " + (data[d]); });
+});
+
+function monthPath(t0) {
+  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+      d0 = t0.getDay(), w0 = d3.time.weekOfYear(t0),
+      d1 = t1.getDay(), w1 = d3.time.weekOfYear(t1);
+  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+      + "H" + w0 * cellSize + "V" + 7 * cellSize
+      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+      + "H" + (w1 + 1) * cellSize + "V" + 0
+      + "H" + (w0 + 1) * cellSize + "Z";
+}
+
+d3.select(self.frameElement).style("height", "2910px");
+
+
+var margin = { top: 50, right: 0, bottom: 10, left: 60 },
+          width = 2000 - margin.left - margin.right,
+          height = 650 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 24),
+          legendElementWidth = gridSize,
+          buckets = 9,
+          colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
+          days = availablePorts(),
+          times = availableCountries(),
+          datasets = ["heatmap/data.tsv", "heatmap/data2.tsv"];
+
+      var svg = d3.select("#area1")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      var dayLabels = svg.selectAll(".dayLabel")
+          .data(days)
+          .enter().append("text")
+            .text(function (d) { return d; })
+            .attr("x", 0)
+            .attr("y", function (d, i) { return i * gridSize; })
+            .style("text-anchor", "end")
+            .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+            .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });
+
+      var timeLabels = svg.selectAll(".timeLabel")
+          .data(times)
+          .enter().append("text")
+            .text(function(d) { return d; })
+            .attr("x", function(d, i) { return i * gridSize; })
+            .attr("y", 0)
+            .style("text-anchor", "middle")
+            .attr("transform", "translate(" + gridSize / 2 + ", -6)")
+            .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis"); });
+
+      var heatmapChart = function(csvFile) {
+        d3.tsv(csvFile,
+        function(d) {
+          return {
+            day: +d.day,
+            hour: +d.hour,
+            value: +d.value,
+            ip: d.ip,
+            port: d.port
+          };
+        },
+        function(error, data) {
+          var colorScale = d3.scale.quantile()
+              .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
+              .range(colors);
+
+          var cards = svg.selectAll(".hour")
+              .data(data, function(d) {return d.day+':'+d.hour;});
+
+          cards.append("title");
+
+          cards.enter().append("rect")
+              .attr("x", function(d) { return (d.hour - 1) * gridSize; })
+              .attr("y", function(d) { return (d.day - 1) * gridSize; })
+              .attr("rx", 4)
+              .attr("ry", 4)
+              .attr("class", "hour bordered")
+              .attr("width", gridSize)
+              .attr("height", gridSize)
+              .style("fill", colors[0])
+              .on("click", function(d){
+                chosenIp(d.ip);
+                chosenPort(d.port)
+                console.log(d.value+" "+""+chosenIp()+" "+chosenPort());
+                updateGraph();
+              });
+
+          cards.transition().duration(1000)
+              .style("fill", function(d) { return colorScale(d.value); });
+
+          cards.select("title").text(function(d) { return d.ip +'and' + d.port+':'+d.value; });
+          
+          cards.exit().remove();
+
+        });  
+      };
+
+      heatmapChart('/heatmap/2008-01-01.csv');
+      
+      var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
+        .data(datasets);
+
+      datasetpicker.enter()
+        .append("input")
+        .attr("value", function(d){ return "Dataset " + d })
+        .attr("type", "button")
+        .attr("class", "dataset-button")
+        .on("click", function(d) {
+          updateGraph();
+        });
+
+function updateGraph(){
+d3.select("#area2").selectAll("svg").remove();
+
+var margin = {top: 30, right: 20, bottom: 30, left: 70},
+width = 2000 - margin.left - margin.right,
+height = 500 - margin.top - margin.bottom;
+
+// Parse the date / time
+
+
+// Set the ranges
+var x = d3.time.scale().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+// Define the line
+var valueline = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.close); });
+    
+// Adds the svg canvas
+var svg = d3.select("#area2")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.csv("chart/"+currentDate()+'_'+chosenIp()+'_'+chosenPort()+'.csv', function(error, data) {
+    data.forEach(function(d) {
+        d.date = +d.date;
+        d.close = +d.close;
+    });
+
+    // Scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+
+    // Add the valueline path.
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+      });
+    };
+
+    updateGraph()
+  };
+
+function changeIpOrPort() {
+
+    // Get the data again
+    d3.csv("data1.csv", function(error, data) {
+        data.forEach(function(d) {
+        d.date = parseDate(d.date);
+        d.close = +d.close;
+      });
+
+      // Scale the range of the data again 
+      x.domain(d3.extent(data, function(d) { return d.date; }));
+      y.domain([0, d3.max(data, function(d) { return d.close; })]);
+
+    // Select the section we want to apply our changes to
+    var svg = d3.select("#area2").transition();
+
+    // Make the changes
+        svg.select(".line")   // change the line
+            .duration(750)
+            .attr("d", valueline(data));
+        svg.select(".x.axis") // change the x axis
+            .duration(750)
+            .call(xAxis);
+        svg.select(".y.axis") // change the y axis
+            .duration(750)
+            .call(yAxis);
+
+    });
+  }
+
+firstGraph();
+
+</script>
+</body>
+
+\end{lstlisting}

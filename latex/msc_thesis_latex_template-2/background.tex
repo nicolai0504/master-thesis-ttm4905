@@ -3,10 +3,10 @@
 
 \section{NetFlow}
 \label{netflow}
-Cisco IOS NetFlow creates an enviroment that have the tools to understand who, what, when, where and how network traffic is flowing. This makes it easier for administrators to utilize the network as optimal as possible. One can determine the source and destination of traffic and use this information to reveal for example DDoS-attacks or spam mail. 
+Cisco IOS NetFlow creates an enviroment that have the tools to understand who, what, when, where and how network traffic is flowing. This makes it easier for administrators to utilize the network as optimal as possible. One can determine the source and destination of traffic and use this information to reveal for example DDoS-attacks or spam mail.
 
 \subsection{How does it work?}
-Every packet that is forwarded within a router/switch is examined for a set of IP packet attributes. With these attributes one can determine if the packet is unique or similar to other packets. 
+Every packet that is forwarded within a router/switch is examined for a set of \gls{ip} packet attributes. With these attributes one can determine if the packet is unique or similar to other packets. 
 
 The attributes used by NetFlow are:
 \begin{itemize}
@@ -21,8 +21,8 @@ The attributes used by NetFlow are:
 
 To group packets into a flow, one compares source/destination IP address, source/destination ports, protocol interface and class of service. Then the packets and bytes are tallied. This method is scalable because a large amount of network information is condensed into a database of NetFlow information called the NetFlow cache. 
 
-When the NetFlow cache is created one can use this to understand the network behaviour. The different attributes generate different knowledge about a certain network, and combined they can paint a detailed picture of how the network is working. For example the ports show what application is utlizing the traffic, while the tallied packets and bytes show the amount of traffic. 
-
+When the NetFlow cache is created one can use this to understand the network behaviour. The different attributes generate different knowledge about a certain network, and combined they can paint a detailed picture of how the network is working. For example the ports show what application is utilizing the traffic, while the tallied packets and bytes show the amount of traffic. 
+\citep{cisco_netflow}
 
 \begin{figure}[h!]
 \includegraphics[scale=0.2]{netflow_cache}
@@ -43,9 +43,9 @@ Additional information added to a flow includes:
 
 
 \item Flow timestamps to understand the life of a flow; timestamps are useful for calculating packets and bytes per second
-\item Next hop IP addresses including BGP routing Autonomous Systems (AS)
+\item Next hop IP addresses including \gls{bgp} routing \gls{as}
 \item Subnet mask for the source and destination addresses to calculate prefixes
- \item  flags to examine TCP handshakes
+ \item  flags to examine \gls{tcp} handshakes
 
 \end{itemize}
 \todo{Lime inn hvordan det ser ut i kommandolinjen}
@@ -53,7 +53,7 @@ Additional information added to a flow includes:
 \todo{sitere listen}
 
 \subsection{Main components}
-A typical setup using NetFlow consists of three main components:
+A typical set-up using NetFlow consists of three main components:
 
 \begin{itemize}
 \item \textbf{Flow Exporter:} aggregates packets into flows and exports flow records towards one or more flow collectors. 
@@ -68,8 +68,54 @@ A typical setup using NetFlow consists of three main components:
 \caption{Figure of a simple NetFlow architecture}
 \end{figure}
 
+\subsection{nfdump}
+\todo(skrive om ipfix, v5 og v9, muligens i egen seksjon)
+nfdump collect and process NetFlow data on the command line. It stores NetFlow data in time sliced files. The files are binary and this provides the possibility of either returning the output from nfdump in the same binary form, or as readable text. nfdump has four output formats, raw, line, long and extended. 
+The challenge of representing \gls{ipv6} addresses is handled by shrinking them in the normal output. 
+In figure \ref{nfdump_operation} the collection process is depicted, and in figure \ref{nfdump_processing} the processing of collected NetFlow data is shown.\citep{nfdump}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{nfdump_operation}
+\caption{Example of dataset of random numbers where no pre-attentive processing is done}
+\label{nfdump_operation}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{nfdump2}
+\caption{Example of dataset of random numbers where no pre-attentive processing is done}
+\label{nfdump_processing}
+\end{figure}
+
+\subsubsection{v5,v9 and IPfix}
+\begin{itemize}
+\item \textbf{v5:} NetFlow v5 is definitely the most popular version of Cisco Netflow. It is fixed, maning it always stays the same and makes for a simpler deciphering. 
+
+\item \textbf{v9:} v9 is opposite of its predecessor dynamic. The collector will need to know the format of incoming NetFlow v9 flows, which means v9 templates periodically needs to be sent to the collector to inform of the format which the flows are being exported are. It was made to support technologies as Multi-cast, IPSec and Multi Protocol Label Switching (MPLS). This thanks to the templates. IPv6 support was added as well. 
+
+\item \textbf{IPFIX:} Based on the design of NetFlow v9, \gls{ipfix} added support for variable length strings. Making it possible for Application Visibility and Control(AVC) exports in the future.\todo{forklare?}
+\end{itemize}
+
+\subsubsection{Example of use}
+An example of a nfdump command used in this project is for example how to extract the number of flows each day, and find the 10 most used destination IP-addresses:
+
+\begin{lstlisting}[language=bash]
+nfdump -R /data/netflow/oslo_gw/2012/01/01/nfcapd.201201010000:nfcapd.201201012355 -n 10 -s dstip -o csv > example.csv
+\end{lstlisting}
+
+Such a request iterates over a number of files due to the -R command. In this case it is all captures between 00:00 until 23:55 on the first of January 2012. It is limited to the 10 most popular destination IP's with the -n and -s. All of this is stored in a .\gls{csv}file which is optimal for use with the D3.js framework. 
+
+This results in the output shown in figure \ref{top10example}.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.4]{top10example}
+\caption{Example of dataset of random numbers where no pre-attentive processing is done}
+\label{top10example}
+\end{figure}
+
+
+
 \section{Data visualization}
-Data visualization refers to the techniques used to communicate data or information by encoding it as visual objects[sitere?]. Meaning that information is represented trough any visual element such as graphs and plots, but may also take any other visual form. Visualization helps users analyse and interact with data in a whole new way. It makes complex data more accessible, understandable and usable. 
+Data visualization refers to the techniques used to communicate data or information by encoding it as visual objects[sitere?]. Meaning that information is represented trough any visual element such as graphs and plots, but may also take any other visual form. Visualization helps users analyse and interact with data in a whole new way. It makes complex data more accessible, understandable and usable.\cite{friedman}
 
 In recent years the rate of which data is generated has increased rapidly, and the need for information to be available and comprehensible is growing. All these new sources of data has created what we refer to as "Big Data". Without visual presentation such data is too big to understand. This is the big reason for visualization is emerging as a big market. 
 
@@ -109,7 +155,7 @@ A good example of this is imagining finding the number of a certain character in
 \caption{Example of a dataset of random numbers where pre-attentive processing has been used to distinguish the occurrences of the number five}
 \end{figure}
 \subsection{Data presentation architecture}
-Data presentation architecture(DPA) has its purpose to identify, locate, manipulate, format and present data in such a way as to optimally communicate meaning and proffer knowledge\cite{wiki_data_viz}. This has become an important tool in Business Intelligence, the art of transforming raw data into something useful. 
+\gls{dpa} has its purpose to identify, locate, manipulate, format and present data in such a way as to optimally communicate meaning and proffer knowledge\cite{wiki_data_viz}. This has become an important tool in Business Intelligence, the art of transforming raw data into something useful. 
 
 \subsubsection{Objectives}
 DPA has two main objectives, which is the following:
@@ -132,15 +178,15 @@ The actual work of DPA consist of:
 
 
 \section{D3.js}
-In this paper D3.js is chosen as the framework to create examples of effective data visualizations due to its dynamical and interactive properties. 
+In this paper D3.js \citep{D3} is chosen as the framework to create examples of effective data visualizations due to its dynamical and interactive properties. 
 D3 stands for Data-Driven Documents, and is a Javascript library. 
-D3.js allows users to bind arbitrary data to a Document Object Model. It uses widely implemented SVG, CSS and HTML5 standards. D3 is unique in the way it creates SVG objects from large datasets using simple D3.js functions to generate rich text/graphic charts and diagrams. 
+D3.js allows users to bind arbitrary data to a Document Object Model. It uses widely implemented \gls{svg}, \gls{css} and \gls{html}5 standards. D3 is unique in the way it creates SVG objects from large datasets using simple D3.js functions to generate rich text/graphic charts and diagrams. 
 
 
 \subsection{How does it work?}
 The W3C DOM API is often tiring to use. An example bit of code from[link/kilde] shows how one changes the text color of paragraph elements:
 
-\begin{lstlisting}[language=HTML]
+\begin{lstlisting}[caption={HTML example}][language=HTML]
 
 var paragraphs = document.getElementsByTagName("p");
 for (var i = 0; i < paragraphs.length; i++) {
@@ -152,14 +198,14 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 In D3.js this could be solved trough one line of code:
 
-\begin{lstlisting}[language=HTML]
+\begin{lstlisting}[caption={D3.js example}][language=HTML]
 d3.selectAll("p").style("color", "white");
 \end{lstlisting}
 
 D3.js also possess dynamic properties which gives the user a powerful tool to create advanced graphics with a small amount of code. 
 
 This next snippet of code shows how the D3.js framework simply appends to an existing html object. 
-\begin{lstlisting}[language=HTML]
+\begin{lstlisting}[caption={Example of use of the D3.js framework}][language=HTML]
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style> /* set the CSS */

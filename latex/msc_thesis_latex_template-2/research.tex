@@ -11,36 +11,39 @@ In \cite{nvisionip_list} they discuss the use of NVisionIP to combat different s
 \item \textbf{Compromised systems}: If a host is compromised, the attacker might install malware that allows the attacker to control the machine. Following this an attacker might turn a host into a file server. By detecting large volumes of traffic on certain ports one might discover such an attack. 
 \item \textbf{Misuse}: Misuse of computer networks in order with terms of use etc.. An example is detecting if certain users have abnormal high volumes of traffic, and by inspecting in more detail one can uncover if this trough one single application and not in accordance with the policies of the organization. 
 \item \textbf{Port Scans}: When a large number of ports are used at a specific host it is easily identified by NVisionIP.
-\item \textbf{DoS}: Denial of Service Attacks will be visible trough spikes in traffic volume from the host attacking. If a host is attacked the same pattern is visible trough high volumes in receiving traffic. Thus peaks in traffic is not necessary an attack, but might be a result of a new release, or backup etc .. 
+\item \label{patterns}\textbf{\gls{dos}:} Denial of Service Attacks will be visible trough spikes in traffic volume from the host attacking. If a host is attacked the same pattern is visible trough high volumes in receiving traffic. Thus peaks in traffic is not necessary an attack, but might be a result of a new release, or backup etc.
 \end{itemize}
 
+
+
+
 \section{Initial research}
-In section \ref{netflow} we see how the raw format of the NetFlow packets look. Comparing how understandable this format is comparing to a visual representation will be the main object of this paper(omformulere. ikke helt riktig). How much more effective is visualization compared to the raw format read by machines. 
+In section \ref{netflow} we see how the raw format of the NetFlow packets look. \gls{ntnu} \gls{lvm}Comparing how understandable this format is comparing to a visual representation will be the main object of this paper(omformulere. ikke helt riktig). How much more effective is visualization compared to the raw format read by machines. 
 
 To understand this, experiments will determine how quickly one can distinguish an attack from both the raw format, and the visual representation. 
 
-This is were D3.js will come to great use. It can be used to quickly develop simple interactive graphs that can be used to test up against each other.
+This is were D3.js will come to great use. It can be used to quickly develop simple interactive graphs that can be used to test theories up against each other.
 
 To be able to identify an DDoS attack, one can look at it from two angles. By finding someone whom is attacking, or someone whom is being attacked. In this case we will look at the second scenario. As mentioned earlier simply a peak in flows is not enough grounds to establish an actual attack. First of all, one will need to look for patterns of similar incidents, and what lies behind them.
 
 \newpage
 
 \section{Traits of a DDoS attack}
-In a Distributed Denial of Service attack there are a large number of hosts performing the attack. In many cases a lot of them are not even aware they are a part on an attack. This is called a botnet, derived from the words robot and network. Using compromised systems, called zombies, gives the attacker control of a large enough amount of hosts to perform a volume-based DDoS attack. 
+In a \gls{ddos} attack there are a large number of hosts performing the attack. In many cases a lot of them are not even aware they are a part on an attack. This is called a botnet, derived from the words robot and network. Using compromised systems, called zombies, gives the attacker control of a large enough amount of hosts to perform a volume-based DDoS attack. 
 
+\begin{figure}[h!]
+\caption{Ten files in the provided files with the most flows \citep{cisco_ddos}}
 \includegraphics[scale=0.2]{botnet}
-
+\end{figure}
 Another new trend that has emerged is using large datacenters or cloud machines to launch these attacks. Either trough renting or compromising them. As cloud providers are offering such large amounts of computers, this new platform is not only great for legitimate use, but also cyber-criminals.
 
+\begin{figure}[h!]
+\caption{Ten files in the provided files with the most flows \citep{cisco_ddos}}
 \includegraphics[scale=0.2]{cloud}
-
-Distributed Reflection Denial of Service attacks is becoming more and more popular. DrDoS techniques usually involve mulitple victim host machines that unwillingly participate in a DDoS attack on the attackers primary target. Requests to the victim host machines are redirected, or re ected, from the victim hosts to the target. Anonymity is one advantage of the DrDoS attack method. In a DrDoS attack, the primary target appears to be directly attacked by the victim host servers, not the actual attacker. This approach is called spoo ng.
-Ampli cation is another advantage of the DrDoS attack method. By involving multiple victim servers, the attacker’s initial request yields a response that is larger than what was sent, thus increasing the attack bandwidth.
+\end{figure}
+Distributed Reflection Denial of Service attacks is becoming more and more popular. DrDoS techniques usually involve mulitple victim host machines that unwillingly participate in a DDoS attack on the attackers primary target. Requests to the victim host machines are redirected, or re ected, from the victim hosts to the target. Anonymity is one advantage of the DrDoS attack method. In a DrDoS attack, the primary target appears to be directly attacked by the victim host servers, not the actual attacker. This approach is called spoofing.Amplification is another advantage of the DrDoS attack method. By involving multiple victim servers, the attacker’s initial request yields a response that is larger than what was sent, thus increasing the attack bandwidth.
 
 \includegraphics[scale=0.2]{drdos}
-
-\newpage
-
 
 \subsection{Raw NetFlow format}
 
@@ -54,58 +57,6 @@ In the preceding example, there are multiple flows for UDP port 80 (hex value 00
 The packets in these flows may be spoofed and may indicate an attempt to perform these attacks. It is advisable to compare the flows for TCP port 53 (hex value 0035) and TCP port 80 (hex value 0050) to normal baselines to aid in determining whether an attack is in progress.
 
 
-\section{Using D3.js}
-Earlier in this paper it is mentioned that D3.js will be used to show examples of effective visualization of NetFlow data. It is assumed that the data has already been processed before it is made accessible to these examples. I was supplied with two months of anonymous data from UNINETT to get familiar with NetFlow and be able to use real data for my visualizations. This January of 2012 from Trondheim and Oslo NetFlow collectors. This means millions of data entries. 
 
-\subsection{Scope}
-The vast amounts of data should be presented with such a scope that is intuitive and easily understandable. Considering NetFlow packages is timestamped and sent from one source address to a specific destination address's port, one will have to chose which of these spectrum's to focus on. 
 
-\subsubsection{IP spectrum}
-Choosing the address spectrum as the main focus, one will have to find a way to represent the entire IPv4 spectrum. This is alone a challenge, and when it comes to IPv6, it becomes practically impossible. This results in relying more on the pre-processing of the data and segregating the IP-addresses actually worth noticing. In the data provided by UNINETT it is possible to list for example the top 10 files in size, meaning more flows. 
-In the data provided by UNINETT this search provided the results in figure \ref{topten}.
-
-\begin{figure}[h!]
-
-\includegraphics[scale=0.6]{top10}
-\caption{Ten files in the provided files with the most flows}
-\label{topten}
-\end{figure}
-
-From this simple preprocessing it is easy to see that in the time period between 1300-1400 on the 18th of January there was a clear peak in the number of flows having all the spots in the top 10. If we compare to the times with the lowest amount there is a different as they are a fraction of the others.
-
-\begin{figure}
-\includegraphics[scale=0.6]{bottom}
-\caption{The smallest files from the provided files}
-\end{figure}
-
-Trough this we create a csv file containing the hour in question going further in detail.
-Analysing which destination address is the most requested is the next step. 
-
-\begin{figure}
-\includegraphics[scale=0.6]{ip_top_list}
-\caption{Top ten used destination addresses within the timeframe 1300-1400, 18th of January}
-\end{figure}
-
-Again one specific address is clearly separated from the others. At this point we have gotten such into detail on the dataset, it is time to find the reason behind the results we have found. 
-These high numbers could be a DDoS attack, or other types of attacks, but not does not necessary ill willed. If we look at the list of top IP-addresses sending packets.
-\begin{figure}
-\includegraphics[scale=0.6]{top10_sa}
-\caption{Top ten used destination addresses within the timeframe 1300-1400, 18th of January}
-\end{figure}
-
-We see that the same IP-address, $192.239.62.2$, is here high up as well. Among hundreds of thousands of addresses in the spectrum. 
-
-If we were to figure out what application is the reason behind this traffic, one would have to include destination port, and a look at source port might also reveal something. 
-
-\todo{sjekke opp med portnr og}
-
-\subsubsection{Time spectrum}
-On the other side we have the time spectrum. In this case one looks at the amounts of flows within one time slot. Not down to the different IP-addresses. 
-
-\subsection{Number of flows to a certain host and port}
-This example shows how a simple graph can recognize a DDoS attack trough giving the option to see the number of netflows on different hosts and ports. 
-
-\todo{Screenshot}
-
-To confirm that such a solution is more effective, it must be tested. By creating a simple tool to convey information visually and give people with no or little information on NetFlow a chance to compare a visual solution to the raw machine readable data, and find out how effective it actually is.  
 

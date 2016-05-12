@@ -1,0 +1,18 @@
+Top 10 populære ip-adresser per dag
+	Samme kall som på antall flows per dag
+	nfdump -R /data/netflow/oslo_gw/2012/01/01/nfcapd.201201010000:nfcapd.201201012355 -n 10 -s dstip -o csv > /home/eeglarse/flowtest/totaltest.csv
+Top 10 porter basert på disse ipadressene
+	Filtrere ut med bare top 10 adresser og så samme kall med dstpport som filter
+	nfdump -R /data/netflow/oslo_gw/2012/01/01/nfcapd.201201010000:nfcapd.201201012355 -n 10 -s dstport -o csv 'dst ip 191.220.233.80 or dst ip 162.185.32.85' > /home/eeglarse/flowtest/totaltest2.csv
+
+Flows per port per ip-adresse per døgn
+	telle flows med spesifike ipadresser og port kombinasjoner
+	nfdump -R /data/netflow/oslo_gw/2012/01/01/nfcapd.201201010000:nfcapd.201201012355 -n 10 -s dstport -o csv 'dst ip 191.220.233.80 and dst port 80'
+
+Time for time flows for disse ipadressene og portene
+
+
+DONE:
+Totalt antall flows per dag
+
+
