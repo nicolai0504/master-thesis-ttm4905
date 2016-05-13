@@ -13,5 +13,5 @@
 (indexentry :tkey (("NTNU" "\\glossentry{ntnu}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("LVM" "\\glossentry{lvm}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("DDoS" "\\glossentry{ddos}") ) :locref "{}{15}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("IPv4" "\\glossentry{ipv4}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("IPv6" "\\glossentry{ipv6}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("IPv4" "\\glossentry{ipv4}") ) :locref "{}{25}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("IPv6" "\\glossentry{ipv6}") ) :locref "{}{25}" :attr "pageglsnumberformat" ) 

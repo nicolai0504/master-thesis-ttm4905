@@ -25,23 +25,23 @@
 \contentsline {section}{\numberline {2.1}Related work}{13}{section.2.1}
 \contentsline {section}{\numberline {2.2}Initial research}{14}{section.2.2}
 \contentsline {section}{\numberline {2.3}Traits of a DDoS attack}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Raw NetFlow format}{15}{subsection.2.3.1}
-\contentsline {chapter}{\chapternumberline {3}D3.js and NetFlow}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Using D3.js}{17}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Scope}{17}{subsection.3.1.1}
-\contentsline {subsubsection}{IP spectrum}{17}{section*.13}
-\contentsline {subsubsection}{Time spectrum}{19}{section*.15}
-\contentsline {section}{\numberline {3.2}Number of flows to a certain host and port}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Scope in D3.js}{19}{subsection.3.2.1}
-\contentsline {subsubsection}{File structure}{20}{section*.17}
-\contentsline {subsubsection}{Overview}{20}{section*.18}
-\contentsline {subsubsection}{IP-addresses and ports}{20}{section*.19}
-\contentsline {subsubsection}{24-hour chart}{21}{section*.20}
-\contentsline {chapter}{\chapternumberline {4}Challenges}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Large data sets}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}IP-spectrum}{23}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Increasing number of flows}{23}{subsection.4.1.2}
-\contentsline {chapter}{References}{25}{section*.22}
+\contentsline {subsection}{\numberline {2.3.1}Raw NetFlow format}{16}{subsection.2.3.1}
+\contentsline {chapter}{\chapternumberline {3}D3.js and NetFlow}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Using D3.js}{19}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Scope}{19}{subsection.3.1.1}
+\contentsline {subsubsection}{IP spectrum}{19}{section*.13}
+\contentsline {subsubsection}{Time spectrum}{21}{section*.15}
+\contentsline {section}{\numberline {3.2}Number of flows to a certain host and port}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Scope in D3.js}{21}{subsection.3.2.1}
+\contentsline {subsubsection}{File structure}{22}{section*.17}
+\contentsline {subsubsection}{Overview}{22}{section*.18}
+\contentsline {subsubsection}{IP-addresses and ports}{22}{section*.19}
+\contentsline {subsubsection}{24-hour chart}{23}{section*.20}
+\contentsline {chapter}{\chapternumberline {4}Challenges}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Large data sets}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}IP-spectrum}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Increasing number of flows}{25}{subsection.4.1.2}
+\contentsline {chapter}{References}{27}{section*.22}
 \vspace {1em}\noindent \bfseries Appendices\par \vspace {-.5em}
-\contentsline {appendix}{\chapternumberline {A}Appendix A}{29}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Appendix B}{39}{appendix.B}
+\contentsline {appendix}{\chapternumberline {A}Appendix A}{31}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Appendix B}{41}{appendix.B}
