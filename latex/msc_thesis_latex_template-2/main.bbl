@@ -1,17 +1,37 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{LYBL04}
+\begin{thebibliography}{MBD{\etalchar{+}}12}
 
-\bibitem[Bos12]{D3}
-Michael Bostock.
-\newblock D3. js.
-\newblock {\em Data Driven Documents}, 2012.
+\bibitem[Bos16]{D3}
+Mike Bostock.
+\newblock D3.js - data-driven documents, 2016.
 
 \bibitem[cis16]{cisco_ddos}
 2016.
 
+\bibitem[Cla04]{v9}
+Benoit Claise.
+\newblock Cisco systems netflow services export version 9.
+\newblock 2004.
+
+\bibitem[CO02]{datatraffic}
+K.~G. Coffman and A.~M. Odlyzko.
+\newblock {\em Handbook of Massive Data Sets}, chapter Internet Growth: Is
+  There a ``Moore's Law'' for Data Traffic?, pages 47--93.
+\newblock Springer US, Boston, MA, 2002.
+
+\bibitem[EKMV04]{netflow_evolve}
+Cristian Estan, Ken Keys, David Moore, and George Varghese.
+\newblock Building a better netflow.
+\newblock {\em SIGCOMM Comput. Commun. Rev.}, 34(4):245--256, August 2004.
+
 \bibitem[Fri08]{friedman}
 Vitaly Friedman.
-\newblock Data visualization and infographics  smashing magazine, 2008.
+\newblock Data visualization and infographics smashing magazine, 2008.
+
+\bibitem[Jam07]{2007visual}
+G~Harry Jamieson.
+\newblock {\em Visual communication: More than meets the eye}.
+\newblock Intellect Books, 2007.
 
 \bibitem[LYBL04]{nvisionip}
 K.~Lakkaraju, W.~Yurcik, R.~Bearavolu, and A.~J. Lee.
@@ -28,13 +48,36 @@ Kiran Lakkaraju, William Yurcik, and Adam~J. Lee.
   Data Mining for Computer Security}, VizSEC/DMSEC '04, pages 65--72, New York,
   NY, USA, 2004. ACM.
 
+\bibitem[MBD{\etalchar{+}}12]{bigdata}
+Andrew McAfee, Erik Brynjolfsson, Thomas~H Davenport, DJ~Patil, and Dominic
+  Barton.
+\newblock Big data.
+\newblock {\em The management revolution. Harvard Bus Rev}, 90(10):61--67,
+  2012.
+
 \bibitem[nfd16]{nfdump}
+2016.
+
+\bibitem[PMA{\O}04]{flow_monitoring}
+Michalis Polychronakis, Evangelos~P Markatos, Kostas~G Anagnostakis, and Arne
+  {\O}sleb{\o}.
+\newblock Design of an application programming interface for ip network
+  monitoring.
+\newblock In {\em Network Operations and Management Symposium, 2004. NOMS 2004.
+  IEEE/IFIP}, volume~1, pages 483--496. IEEE, 2004.
+
+\bibitem[sim16]{simple_graph}
 2016.
 
 \bibitem[SST{\etalchar{+}}16]{cisco_netflow}
 Products Services, Cisco Software, Cisco Technologies, Management
   Instrumentation, Cisco NetFlow, Data Literature, and White Papers.
 \newblock Introduction to cisco ios netflow - a technical overview, 2016.
+
+\bibitem[TB11]{ipfix}
+Brian Trammell and Elisa Boschi.
+\newblock An introduction to ip flow information export (ipfix).
+\newblock {\em Communications Magazine, IEEE}, 49(4):89--95, 2011.
 
 \bibitem[TGM83]{tufte}
 Edward~R Tufte and PR~Graves-Morris.

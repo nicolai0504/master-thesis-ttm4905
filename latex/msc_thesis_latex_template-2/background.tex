@@ -4,7 +4,8 @@
 \section{NetFlow}
 \label{netflow}
 Cisco IOS NetFlow creates an enviroment that have the tools to understand who, what, when, where and how network traffic is flowing. This makes it easier for administrators to utilize the network as optimal as possible. One can determine the source and destination of traffic and use this information to reveal for example DDoS-attacks or spam mail.
-
+\citep{flow_monitoring}
+\todo{bruke den siste referansen}
 \subsection{How does it work?}
 Every packet that is forwarded within a router/switch is examined for a set of \gls{ip} packet attributes. With these attributes one can determine if the packet is unique or similar to other packets. 
 
@@ -22,7 +23,7 @@ The attributes used by NetFlow are:
 To group packets into a flow, one compares source/destination IP address, source/destination ports, protocol interface and class of service. Then the packets and bytes are tallied. This method is scalable because a large amount of network information is condensed into a database of NetFlow information called the NetFlow cache. 
 
 When the NetFlow cache is created one can use this to understand the network behaviour. The different attributes generate different knowledge about a certain network, and combined they can paint a detailed picture of how the network is working. For example the ports show what application is utilizing the traffic, while the tallied packets and bytes show the amount of traffic. 
-\citep{cisco_netflow}
+\citep{cisco_netflow} \citep{netflow_evolve}
 
 \begin{figure}[h!]
 \includegraphics[scale=0.2]{netflow_cache}
@@ -60,7 +61,7 @@ A typical set-up using NetFlow consists of three main components:
 
 \item \textbf{Flow collector:} is responsible for reception, storage and pre-processing of flow data received from a flow exporter.
 
-\item \textbf{Analysis application:} an application that analyze the received flow data in different contexts, such as intrusion or traffic profiling.
+\item \textbf{Analysis application:} an application that analyse the received flow data in different contexts, such as intrusion or traffic profiling.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -88,17 +89,17 @@ In figure \ref{nfdump_operation} the collection process is depicted, and in figu
 
 \subsubsection{v5,v9 and IPfix}
 \begin{itemize}
-\item \textbf{v5:} NetFlow v5 is definitely the most popular version of Cisco Netflow. It is fixed, maning it always stays the same and makes for a simpler deciphering. 
+\item \textbf{v5:} NetFlow v5 is definitely the most popular version of Cisco Netflow. It is fixed, meaning it always stays the same and makes for a simpler deciphering. 
 
-\item \textbf{v9:} v9 is opposite of its predecessor dynamic. The collector will need to know the format of incoming NetFlow v9 flows, which means v9 templates periodically needs to be sent to the collector to inform of the format which the flows are being exported are. It was made to support technologies as Multi-cast, IPSec and Multi Protocol Label Switching (MPLS). This thanks to the templates. IPv6 support was added as well. 
+\item \textbf{v9:} v9 is opposite of its predecessor dynamic. The collector will need to know the format of incoming NetFlow v9 flows, which means v9 templates periodically needs to be sent to the collector to inform of the format which the flows are being exported are. It was made to support technologies as Multi-cast, IPSec and Multi Protocol Label Switching (MPLS). This thanks to the templates. IPv6 support was added as well. \cite{v9}
 
-\item \textbf{IPFIX:} Based on the design of NetFlow v9, \gls{ipfix} added support for variable length strings. Making it possible for Application Visibility and Control(AVC) exports in the future.\todo{forklare?}
+\item \textbf{IPFIX:} Based on the design of NetFlow v9, \gls{ipfix} added support for variable length strings. Making it possible for Application Visibility and Control(AVC) exports in the future.\todo{forklare?} \cite{ipfix}
 \end{itemize}
 
 \subsubsection{Example of use}
 An example of a nfdump command used in this project is for example how to extract the number of flows each day, and find the 10 most used destination IP-addresses:
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[caption={nfdump example},label={lst:nfdumo}][language=bash]
 nfdump -R /data/netflow/oslo_gw/2012/01/01/nfcapd.201201010000:nfcapd.201201012355 -n 10 -s dstip -o csv > example.csv
 \end{lstlisting}
 
@@ -115,9 +116,10 @@ This results in the output shown in figure \ref{top10example}.
 
 
 \section{Data visualization}
-Data visualization refers to the techniques used to communicate data or information by encoding it as visual objects[sitere?]. Meaning that information is represented trough any visual element such as graphs and plots, but may also take any other visual form. Visualization helps users analyse and interact with data in a whole new way. It makes complex data more accessible, understandable and usable.\cite{friedman}
+\label{sec:dataviz}
+Data visualization refers to the techniques used to communicate data or information by encoding it as visual objects. Meaning that information is represented trough any visual element such as graphs and plots, but may also take any other visual form. Visualization helps users analyse and interact with data in a whole new way. It makes complex data more accessible, understandable and usable.\cite{friedman}
 
-In recent years the rate of which data is generated has increased rapidly, and the need for information to be available and comprehensible is growing. All these new sources of data has created what we refer to as "Big Data". Without visual presentation such data is too big to understand. This is the big reason for visualization is emerging as a big market. 
+In recent years the rate of which data is generated has increased rapidly, and the need for information to be available and comprehensible is growing. All these new sources of data has created what we refer to as "Big Data" \cite{bigdata}. Without visual presentation such data is too big to understand. This is one of the major reasons visualization is emerging as a big market. 
 
 Combining several parameters through visualization could reveal something automated systems might ignore or don't pick up on. \begin{quotation}
 The greatest value of a picture is when it forces us to notice what we never expected to see.
@@ -140,6 +142,7 @@ In his book from 1983, The Visual Display of Quantitative Information\cite{tufte
 \end{itemize}
 
 \subsection{Visual perception}
+\label{sec:atentive}
 In this paper the correlation between effective visual communication and how it is perceived upon human inspection is important. A humans ability to distinguish between differences in length, shape and color is referred to as "pre-attentive attributes".  
 
 A good example of this is imagining finding the number of a certain character in a series of characters. This requires significant time and effort, but if the character were to stand out by being a different size, color or orientation this could be done quickly trough pre-attentive processing. Good data visualization takes all of this into consideration and uses pre-attentive processing. In this simple example it is easy to see how pre attentive processing is used to distinguish how many occurrences of the number 5 is in a larger set of random numbers. 
@@ -155,6 +158,7 @@ A good example of this is imagining finding the number of a certain character in
 \caption{Example of a dataset of random numbers where pre-attentive processing has been used to distinguish the occurrences of the number five}
 \end{figure}
 \subsection{Data presentation architecture}
+\label{sec:dpa}
 \gls{dpa} has its purpose to identify, locate, manipulate, format and present data in such a way as to optimally communicate meaning and proffer knowledge\cite{wiki_data_viz}. This has become an important tool in Business Intelligence, the art of transforming raw data into something useful. 
 
 \subsubsection{Objectives}
@@ -186,7 +190,7 @@ D3.js allows users to bind arbitrary data to a Document Object Model. It uses wi
 \subsection{How does it work?}
 The W3C DOM API is often tiring to use. An example bit of code from[link/kilde] shows how one changes the text color of paragraph elements:
 
-\begin{lstlisting}[caption={HTML example}][language=HTML]
+\begin{lstlisting}[caption={HTML example}, label{lst:html}][language=HTML]
 
 var paragraphs = document.getElementsByTagName("p");
 for (var i = 0; i < paragraphs.length; i++) {
@@ -198,14 +202,14 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 In D3.js this could be solved trough one line of code:
 
-\begin{lstlisting}[caption={D3.js example}][language=HTML]
+\begin{lstlisting}[caption={D3.js example}, label={lst:d3js}][language=HTML]
 d3.selectAll("p").style("color", "white");
 \end{lstlisting}
 
 D3.js also possess dynamic properties which gives the user a powerful tool to create advanced graphics with a small amount of code. 
 
-This next snippet of code shows how the D3.js framework simply appends to an existing html object. 
-\begin{lstlisting}[caption={Example of use of the D3.js framework}][language=HTML]
+This next snippet of code shows how the D3.js framework simply appends to an existing html object. \cite{simple_graph}
+\begin{lstlisting}[caption={Example of use of the D3.js framework}, label={lst:d3example}][language=HTML]
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style> /* set the CSS */

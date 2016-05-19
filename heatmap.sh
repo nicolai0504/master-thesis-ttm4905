@@ -44,7 +44,8 @@ for (( i = 1; i < 31; i++ )); do
 	portlist[9]=$ip
 	for (( s = 0; s < 10; s++ )); do
 	   	for (( j = 0; j < 10; j++ )); do
-	   		$(nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $i)/nfcapd.201201$(printf "%02d" $i)0000:nfcapd.201201$(printf "%02d" $i)2355 -n 10 -s dstport -o csv 'dst ip ${iplist[$s]} and dst port ${portlist[$j]}' -o csv)
+	   		nfdump -R /data/netflow/oslo_gw/2012/01/$(printf "%02d" $i)/nfcapd.201201$(printf "%02d" $i)0000:nfcapd.201201$(printf "%02d" $i)2355 -n 10 -s dstport -o csv 'dst ip ${iplist[$s]} and dst port ${portlist[$j]}' -o csv > /home/eeglarse/flowtest/top10/top10csv/$i_${iplist[$s]}_${portlist[$j]}.csv
 	   	done
 	done
 done
+ 

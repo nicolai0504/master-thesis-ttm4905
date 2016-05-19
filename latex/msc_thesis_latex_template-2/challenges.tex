@@ -9,4 +9,12 @@ In section \ref{characteristics} good visualization is said to be able to presen
 As mentioned the range of the \gls{ipv4} is large, and with the emergence of \gls{ipv6} there is a challenge present. In \ref{sec:heatmap} this was resolved with pre-processing of the data for a specific task. In other cases such a limitation on the number of IP-addresses represented wouldn't be satisfying.  
 
 \subsection{Increasing number of flows}
-The amount of data sent these days are expanding quickly. This means the number of flows will follow, and a visual solution will need to be scalable to handle this increase. In the solution in \ref{sec:d3example}
+The amount of data sent these days are expanding quickly. This means the number of flows will follow, and a visual solution will need to be scalable to handle this increase. In the solution in \ref{sec:d3example} the first overview could scale as the heatmap takes in consideration the range of total flows. 
+The next part of the solution is capable of handling larger amounts of flows, but the limitation in the number of ports and IP-addresses could limit certain attacks as \todo{Finne konkrete eksempler fra tidligere i oppgaven}... . As mentioned with the increase in \gls{ipv6}, the visual representation itself could become less intuitive and simple as the possible combinations of IP-addresses and ports would be too big to yield results(, or reveal attacks). 
+As the last graph is based on simply number of flows over time, it could prove effective even as the number of flows increase. It could be harder to reveal minor spikes in flows as it will be less distinguished than before. 
+
+
+\section{Live updates}
+During the development of the solution made in this paper the data has been static and the time used to process the data and present it has not been taken into consideration. If a visual solution is to be used to monitor traffic as it is being collected the processing of the live data needs to be improved to be able to detect attacks and deviations as they are happening. nfdump is a powerful tool, but the amounts of data generated are so large, and will increase further, that the possibility to filter out specific information is to time consuming and require a lot of resources from UNINETT. 
+It was not made a priority in this paper as the functionality of the visual solution up against the working nfdump was the main focus, not if it met requirements in speed or live monitoring. 
+

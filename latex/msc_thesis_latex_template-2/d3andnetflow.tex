@@ -7,6 +7,7 @@ Earlier in this paper it is mentioned that D3.js will be used to show examples o
 The vast amounts of data should be presented with such a scope that is intuitive and easily understandable. Considering NetFlow packages is timestamped and sent from one source address to a specific destination address's port, one will have to chose which of these spectrum's to focus on. In the visual solution it is natural to combine these to represent the data. 
 
 \subsubsection{IP spectrum}
+\label{sec:ip_spectrum}
 Choosing the address spectrum as the main focus, one will have to find a way to represent the entire IPv4 spectrum. This is alone a challenge, and when it comes to IPv6, it becomes practically impossible. This results in relying more on the pre-processing of the data and segregating the IP-addresses actually worth noticing. In the data provided by UNINETT it is possible to list for example the top 10 files in size, meaning more flows. 
 In the data provided by UNINETT this search provided the results in figure \ref{topten}.
 
@@ -56,7 +57,8 @@ This example shows how a simple graph can recognize a DDoS attack trough giving 
 In this section three modules of a solution is presented to show different levels of detail. It combines both the time spectrum and IP-spectrum to investigate the NetFlow data in different ways. The data from UNINETT required pre-processing before being made available to the D3.js solution. The bash script used can be found in Appendix\ref{chp:appendixb}.
 
 \subsubsection{File structure}
-With the bash scripts, thousands of files are created. Data is split into as small and many files as possible to reduce loading time at the user side, and to make sure the data is as comprehensible as possible. 
+With the bash scripts, thousands of files are created. Data is split into as small and many files as possible to reduce loading time at the user side, and to make sure the data is as comprehensible as possible. In section \ref{sec:atentive} we described the importance of pre-processing the data to highlight certain aspects of larger data sets. With these scripts we perform advanced preprocessing on extreme amounts of data to bring out the desired output to in the best way find deviations.
+\todo{Knytte dette opp til preprocessing}
 
 \subsubsection{Overview}
 First we have the overview which in this case show an entire year separated into months, weeks and days. 
@@ -83,4 +85,60 @@ When a IP-address and port is selected for a specific day, the next scope is to 
 \includegraphics[scale=0.3]{chart}
 \caption{Top ten used destination addresses within the timeframe 1300-1400, 18th of January}
 \end{figure}
- 
+\newpage
+
+
+\subsection{Pros and cons}
+Between the visual solution and the current command line based solution there are pros and cons. Some weighing in more than others depending on the result needed from the solution.
+ \todo{refere til noe i background eller en referanse, i pkt 2 av pros for visuell løsning}
+
+
+\subsubsection{Visual solution}
+\begin{table}[h!]
+\begin{tabularx}{\linewidth}{>{\parskip1ex}X@{\kern4\tabcolsep}>{\parskip1ex}X}
+\toprule
+\hfil\bfseries Pros
+&
+\hfil\bfseries Cons
+\\\cmidrule(r{3\tabcolsep}){1-1}\cmidrule(l{-\tabcolsep}){2-2}
+
+%%% PROS, seperated by empty line or \par
+Very intuitive and simple to use. Meaning the need for competence within nfdump etc. is not as high, and lowers the threshold to use the tool.
+
+Visual interpretation of data is quicker and easier for the human mind to comprehend. Patterns and other aberrations is more likely to be discovered that would not be as visible in a test based solution.
+
+As mentioned in \ref{sec:dpa}, a goal is to show only the data relevant to the user. Meaning the data that is not pertinent the user is never made visible.
+
+&
+
+%% CONS, seperated by empty line or \par
+A visual solution might limit the possibilities that exist in an advanced command line based solution. Meaning that a visual element is limited to some extent. Not showing the whole picture. 
+
+\\\bottomrule
+\end{tabularx}
+\caption{Pros and cons of a visual solution}
+\end{table}
+
+\subsubsection{Command line solution}
+\begin{table}[h!]
+\begin{tabularx}{\linewidth}{>{\parskip1ex}X@{\kern4\tabcolsep}>{\parskip1ex}X}
+\toprule
+\hfil\bfseries Pros
+&
+\hfil\bfseries Cons
+\\\cmidrule(r{3\tabcolsep}){1-1}\cmidrule(l{-\tabcolsep}){2-2}
+
+%% PROS, seperated by empty line or \par
+A command line solution possess a wide range of very specific commands as in nfdump, providing the possibility to do very distinct searches.
+
+&
+
+%% CONS, seperated by empty line or \par
+Such a tool is time consuming and difficult to master. Being very reliable on the searches being correct and providing the exact answer one is looking for requires a fair amount of skill.
+
+Patterns are not easy to recognize when using a command line as it might involve several searches to reveal the information desired. 
+
+\\\bottomrule
+\end{tabularx}
+\caption{Pros and cons of a command line solution}
+\end{table}

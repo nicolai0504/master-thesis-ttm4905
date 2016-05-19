@@ -4,6 +4,7 @@ Appendix B contains the scripts used to create .csv files from all the data made
 
 A script that creates .csv files for every nfcapd file in a day. This script is run by another short script that runs it 31 times for each day.
 \begin{lstlisting}[caption={Creates .csv files for every nfcapd file in a day}][language=bash]
+\label{csv_daily}
 #!/bin/bash
 mkdir /home/eeglarse/flowtest/2012_02/$(printf "%02d" $1)
 clock_converter(){

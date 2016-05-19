@@ -3,61 +3,63 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: abstract_norwegian.aux
 A level-1 auxiliary file: preface.aux
+A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: background.aux
 A level-1 auxiliary file: research.aux
 A level-1 auxiliary file: d3andnetflow.aux
+A level-1 auxiliary file: discussion.aux
 A level-1 auxiliary file: challenges.aux
+A level-1 auxiliary file: furtherwork.aux
 The style file: alpha.bst
 A level-1 auxiliary file: appendixA.aux
 A level-1 auxiliary file: AppendixB.aux
 Database file #1: main.bib
-Repeated entry---line 53 of file main.bib
- : @misc{D3
- :         ,
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in cisco_ddos
 Warning--to sort, need author or key in nfdump
 Warning--to sort, need author or key in wiki_data_viz
+Warning--to sort, need author or key in simple_graph
+Warning--empty journal in v9
+Warning--can't use both author and editor fields in datatraffic
 Warning--can't use both volume and number fields in tufte
-You've used 9 entries,
+You've used 17 entries,
             2543 wiz_defined-function locations,
-            608 strings with 5643 characters,
-and the built_in function-call counts, 3222 in all, are:
-= -- 303
-> -- 139
-< -- 6
-+ -- 49
-- -- 48
-* -- 214
-:= -- 486
-add.period$ -- 20
-call.type$ -- 9
-change.case$ -- 51
-chr.to.int$ -- 9
-cite$ -- 16
-duplicate$ -- 132
-empty$ -- 269
-format.name$ -- 55
-if$ -- 685
+            656 strings with 6805 characters,
+and the built_in function-call counts, 6467 in all, are:
+= -- 622
+> -- 291
+< -- 12
++ -- 103
+- -- 101
+* -- 453
+:= -- 993
+add.period$ -- 42
+call.type$ -- 17
+change.case$ -- 99
+chr.to.int$ -- 17
+cite$ -- 28
+duplicate$ -- 261
+empty$ -- 516
+format.name$ -- 116
+if$ -- 1357
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 5
-newline$ -- 41
-num.names$ -- 18
-pop$ -- 81
+missing$ -- 13
+newline$ -- 78
+num.names$ -- 39
+pop$ -- 144
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 122
 quote$ -- 0
-skip$ -- 131
+skip$ -- 244
 stack$ -- 0
-substring$ -- 145
-swap$ -- 31
-text.length$ -- 6
-text.prefix$ -- 2
+substring$ -- 322
+swap$ -- 58
+text.length$ -- 12
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 68
-warning$ -- 4
-while$ -- 21
-width$ -- 13
-write$ -- 100
-(There was 1 error message)
+type$ -- 124
+warning$ -- 7
+while$ -- 52
+width$ -- 22
+write$ -- 196
+(There were 7 warnings)

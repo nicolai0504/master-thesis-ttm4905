@@ -1,0 +1,26 @@
+\chapter{Introduction}
+\label{chp:introduction}
+
+\section{Motivation}
+Network security, monitoring and Big Data are becoming major pillars in the increase in data usage. Data traffic is growing at an alarming rate[\citep{datatraffic}, and is not showing any signs of slowing down. A majority of this traffic is harmless and not in the interest for network monitors. As the amount of traffic increases, separating malicious from other activity is becoming more difficult. Today network monitoring can be achieved trough using Cisco's NetFlow standard along with tools as nfdump. The visual presentation in such tools are limited, and is not very interactive or intuitive. 
+
+Theory on how data is best presented visually dates back decades. The term 'visual presentation' is used to refer to the actual presentation of information through a visible medium such as text or images \cite{2007visual}. It ranges from simple text to body-language, and a good visual communication design is evaluated based on the comprehension by the audience. 
+
+Using visualization to represent NetFlow data has not been common, and was first published as a solution after the 2004 ACM Workshop on Visualization and data mining for computer security \citep{nvisionip}. In this paper NVisionIP, a java based solution is proposed. Capable of providing the system state, and possibly with further work find patterns or attacks on the network. 
+
+\section{Scope and Objectives}
+\subsection{Scope}
+This thesis will cover the basics in how NetFlow data is generated and collected, and also the tools used to manipulate the raw data. As well as showing theory behind general visualization and how to present data such as NetFlow. D3.js is used to create examples using real NetFlow data provided by UNINETT. 
+
+Connecting the basics mentioned earlier in this section to a simple solution using real anonymous data and allowing volunteers, with experience using nfdump and existing tools, to provide feedback(see \ref{sec:o3} ). 
+
+\subsection{Objectives}
+
+\subsubsection{O.1:  Processing anonymous data}
+UNINETT provided one month of data, which is hundreds of \gls{gb}. A large part of the process is analysing and perform queries using nfdump to be able to extract the exact information needed, as well as sorting it and creating files readable by the D3.js framework. 
+\subsubsection{O.2:   Developing working solution}
+Objective two concerns the development of a simple visual solution using D3.js. One of the main objectives is to use as much of the theory covered in \ref{sec:dataviz} effectively. 
+\subsubsection{O.3   Evaluate solution}
+In objective three the main objective is discussing if the solution created in O.2 display enough potential to be able to use visualization as a tool in network monitoring.
+\label{sec:o3}
+

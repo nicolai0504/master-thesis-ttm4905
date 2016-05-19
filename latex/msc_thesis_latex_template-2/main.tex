@@ -43,7 +43,7 @@
 \author{Nicolai Eeg-Larsen} % Your firstname and lastname
 \professor{Yuming Jiang, ITEM} % Affiliation = ITEM for instance
 \supervisor{Arne Øslebø, UNINETT}
-\supervisor{Otto Wittner, UNINETT}
+
 
 %% Uncomment the following in case you want subfigures; note that there will be a warning for the caption package
 % \let\subcaption\undefined
@@ -56,7 +56,6 @@
 
 \loadglsentries{glossary}
 \makeglossaries
-\DeclareUnicodeCharacter{C296}{ }
 
 \begin{document}
 \selectlanguage{english}
@@ -68,7 +67,7 @@
 
 %% Only for the master's thesis; for the project report the description is taken from It's Learning and added by the department
 % \selectlanguage{english} % Change to 'norsk' if you are writing in Norwegian
- \input{problem_description}
+\input{problem_description}
  \cleardoublepage
 
 %% There must be an abstract in English, even though the main text is in Norwegian
@@ -98,8 +97,8 @@
 \cleardoublepage
 %
 %% include if relevant
-%\listoftables
-%\cleardoublepage
+\listoftables
+\cleardoublepage
 %
 %%% include if relevant
 %\listofalgorithms
@@ -118,10 +117,13 @@
 
 \pagenumbering{arabic}
 \pagestyle{ruled}
+\include{introduction}
 \include{background}
 \include{research}
 \include{d3andnetflow}
+\include{discussion}
 \include{challenges}
+\include{furtherwork}
 \cleardoublepage
 %% include here the other chapters
 

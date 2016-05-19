@@ -1,6 +1,6 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 12.05.2016  18:59:55
-;; Indexstyle: "/var/folders/lx/wpzn2jyx7r96s76gn7h5cyd40000gn/T/D8m8MIz4t4", Rawindex: "/var/folders/lx/wpzn2jyx7r96s76gn7h5cyd40000gn/T/V6BxkyH4r4", Output: "main.acr"
+;; at 19.05.2016  17:46:42
+;; Indexstyle: "/var/folders/lx/wpzn2jyx7r96s76gn7h5cyd40000gn/T/vGAdLdtGFW", Rawindex: "/var/folders/lx/wpzn2jyx7r96s76gn7h5cyd40000gn/T/gGDPMQRKCw", Output: "main.acr"
 
 
 Building indexentry-tree:
@@ -22,8 +22,11 @@ sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
+Letter-group: "„" -> "G"
 Letter-group: "¨È" -> "I"
 Letter-group: "„È" -> "B"
 Letter-group: "€Ð" -> "A"
@@ -40,14 +43,17 @@ Letter-group: "¼Ú¼à" -> "N"
 Letter-group: "´å»" -> "L"
 Letter-group: "ÃÐ" -> "D"
 Letter-group: "¨Èå4" -> "I"
+Letter-group: "€È¨" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€Ð" -> "A"
+Letter-group: "€È¨" -> "A"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "„È" -> "B"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "†ÐÐ" -> "C"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "ÃÐ" -> "D"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "„" -> "G"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "¤Ú»´" -> "H"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
